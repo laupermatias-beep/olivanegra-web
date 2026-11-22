@@ -57,8 +57,8 @@ nav .wrap{display:flex;align-items:center;gap:28px;padding:14px max(5vw,20px);ma
 .logo img{height:38px;width:auto}
 .logo{gap:12px;align-items:flex-end}
 .logo .logo-ev{height:11px;margin-bottom:3px}
-@media(max-width:600px){.logo img{height:32px}.logo .logo-ev{height:8px;margin-bottom:2px}.logo{gap:8px}}
-@media(max-width:400px){.logo .logo-ev{height:7px}.logo img{height:28px}.lang{gap:7px;padding-inline-start:10px}.lang a{font-size:13px}}
+@media(max-width:600px){.logo img{height:38px}.logo .logo-ev{height:10px;margin-bottom:3px}.logo{gap:10px}}
+@media(max-width:400px){.logo .logo-ev{height:9px}.logo img{height:34px}.lang{gap:7px;padding-inline-start:10px}.lang a{font-size:13px}}
 nav .links{display:flex;gap:26px;font-size:15px}
 nav .links a{text-decoration:none;color:#4b4940}
 nav .links a:hover{color:var(--ink)}
@@ -264,6 +264,15 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 .sunday .top{min-height:var(--full,100lvh)}
 .sunday .vid{height:var(--full,100lvh)}
 @media(max-width:960px){.sunday .vid{height:auto}}
+
+.macro{position:relative;display:grid;align-items:end}
+.macro>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.macro::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,11,0,.82),rgba(13,11,0,.15) 55%,rgba(13,11,0,.05))}
+.macro-in{position:relative;z-index:2;display:grid;gap:18px;max-width:760px;padding:0 max(5vw,20px) clamp(56px,10vh,110px)}
+.macro-in .eyebrow{color:rgba(255,255,255,.8);margin:0}
+.macro-in h2{color:#fff}
+.macro-in .lead{color:rgba(255,255,255,.88)}
+.macro-in .cta{margin-top:6px}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
@@ -343,7 +352,15 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
  </div>
 </header>
 
-<div class="macro"><img src="img/r-nero.jpg" alt="Spaghetti negros con almejas sobre crema verde" loading="lazy"></div>
+<section class="macro" id="cocina">
+ <img src="img/r-nero.jpg" alt="Spaghetti negros con almejas sobre crema verde" loading="lazy">
+ <div class="macro-in reveal">
+  <span class="eyebrow">Nuestra cocina</span>
+  <h2>Pasta fresca, fuego lento y producto de temporada.</h2>
+  <p class="lead">Recetas de autor que nacen entre Italia, Argentina y el Mediterráneo. Cada plato se piensa, se prueba y se emplata para tu mesa.</p>
+  <div class="cta"><a class="btn btn-soft" href="#chef">Descúbrenos <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+ </div>
+</section>
 
 <section class="band white chef" id="chef">
  <div class="wrap">

@@ -1,5 +1,9 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Nuestra cocina","La nostra cuina","Our cuisine","Notre cuisine"),
+("Pasta fresca, fuego lento y producto de temporada.","Pasta fresca, foc lent i producte de temporada.","Fresh pasta, slow fire and seasonal produce.","Pâtes fraîches, feu doux et produits de saison."),
+("Recetas de autor que nacen entre Italia, Argentina y el Mediterráneo. Cada plato se piensa, se prueba y se emplata para tu mesa.","Receptes d'autor que neixen entre Itàlia, l'Argentina i la Mediterrània. Cada plat es pensa, es tasta i s'emplata per a la teva taula.","Signature recipes born between Italy, Argentina and the Mediterranean. Every dish is thought through, tasted and plated for your table.","Des recettes d'auteur nées entre l'Italie, l'Argentine et la Méditerranée. Chaque assiette est pensée, goûtée et dressée pour votre table."),
+("Descúbrenos","Descobreix-nos","Discover us","Découvrez-nous"),
 ("Oliva Negra, inicio","Oliva Negra, inici","Oliva Negra, home","Oliva Negra, accueil"),
 ("Oliva Negra Chef & Eventos, inicio","Oliva Negra Chef & Eventos, inici","Oliva Negra Chef & Eventos, home","Oliva Negra Chef & Eventos, accueil"),
 ("El chef","El xef","The chef","Le chef"),
