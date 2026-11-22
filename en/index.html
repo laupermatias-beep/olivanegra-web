@@ -220,7 +220,7 @@ footer .wrap{display:flex;gap:16px 32px;justify-content:space-between;align-item
 .track{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:8px;position:relative}
 .track::-webkit-scrollbar{display:none}
 .track img{flex:0 0 88%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;scroll-snap-align:start;background:#ccc}
-.track img:last-child{margin-inline-end:12%}
+
 .slider{position:relative}
 .nav-b{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.9);display:grid;place-items:center;cursor:pointer;opacity:0;transition:opacity .3s;z-index:2}
 .nav-b svg{width:18px;height:18px;stroke:var(--ink);fill:none;stroke-width:1.8}
@@ -459,6 +459,21 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 .chef .txt .cta{gap:28px}
 .svc-end{gap:36px}
 @media(max-width:600px){.cta,.cta-row{gap:20px}.chef .txt .cta{gap:20px}}
+
+/* soft enveloping vignette on photos, like the M&P project cards */
+:root{--vig:inset 0 0 70px rgba(0,0,0,.38),inset 0 0 22px rgba(0,0,0,.22)}
+.vig,.sl{position:relative;display:block;border-radius:6px;overflow:hidden}
+.vig::after,.sl::after,.day figure::after,.ig a::before,.sunday .vid::after,.pfig::before{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:var(--vig);pointer-events:none;z-index:1}
+.hfig::after{box-shadow:var(--vig)}
+.reel::after{box-shadow:var(--vig)}
+.sunday .vid{position:relative}
+.macro-img .vig{height:100%;aspect-ratio:4/3;max-width:100%}
+.macro-img .vig img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.track .sl{flex:0 0 88%;aspect-ratio:4/3;scroll-snap-align:start}
+.track .sl img{width:100%;height:100%;object-fit:cover;border-radius:0;flex:none;margin:0}
+.track .sl:last-child{margin-inline-end:12%}
+.day figcaption,.hfig figcaption,.reel span,.reel i{z-index:2}
+@media(max-width:800px){.macro-img .vig{width:100%;height:auto;aspect-ratio:1}}
 </style>
 </head>
 <body>
@@ -521,7 +536,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   <p class="lead">Signature recipes born between Italy, Argentina and the Mediterranean. Every dish is thought through, tasted and plated for your table.</p>
   <div class="cta"><a class="btn btn-soft" href="#chef">Discover us <svg class="ic"><use href="#i-arrow"/></svg></a></div>
  </div>
- <div class="macro-img"><img src="../img/r-nero.jpg" alt="Black spaghetti with clams on a green cream" loading="lazy"></div>
+ <div class="macro-img"><span class="vig"><img src="../img/r-nero.jpg" alt="Black spaghetti with clams on a green cream" loading="lazy"></span></div>
 </section>
 
 <section class="band white chef" id="chef">
@@ -729,7 +744,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
  const arrow='<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
  document.getElementById('chips').innerHTML=[["todo","All"],...G.map(g=>[g[0],g[1]])].map(([k,l],i)=>`<button class="chip" type="button" data-k="${k}" aria-pressed="${i===0}">${l}</button>`).join('');
  document.getElementById('cards').innerHTML=G.map(([k,cat,title,desc,imgs])=>`<article class="gcard reveal" data-k="${k}">
-  <div class="slider"><div class="track">${imgs.map(f=>`<img src="../img/${f}.jpg" alt="${cat}" loading="lazy">`).join('')}</div>
+  <div class="slider"><div class="track">${imgs.map(f=>`<span class="sl"><img src="../img/${f}.jpg" alt="${cat}" loading="lazy"></span>`).join('')}</div>
   <button class="nav-b prev" type="button" aria-label="Previous">${arrow}</button><button class="nav-b next" type="button" aria-label="Next">${arrow}</button></div>
   <div class="dots">${imgs.map((_,i)=>`<i class="${i?'':'on'}"></i>`).join('')}</div>
   <div class="gmeta"><span>${cat} · ${imgs.length} photos</span><button class="info" type="button" aria-expanded="false">Info <svg class="ic"><use href="#i-chat"/></svg></button></div>
