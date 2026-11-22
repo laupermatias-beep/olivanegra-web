@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Oliva Negra · Xef &amp; Esdeveniments</title>
+<link rel="alternate" hreflang="es" href="https://www.olivanegra.es/"><link rel="alternate" hreflang="ca" href="https://www.olivanegra.es/ca/"><link rel="alternate" hreflang="en" href="https://www.olivanegra.es/en/"><link rel="alternate" hreflang="fr" href="https://www.olivanegra.es/fr/"><link rel="alternate" hreflang="x-default" href="https://www.olivanegra.es/">
+<meta name="description" content="Oliva Negra · Matias Lauper. Cuina d'autor per a sopars privats, casaments, empreses i esdeveniments a Barcelona i la Costa Brava.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@700;800&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: sobria y segura, como una agencia de diseño suiza que cocina; poco texto, mucho aire.
+   IDEA: la línea de M&P: fotografía macro a sangre, gris claro, títulos finos y estrechos, listas con íconos de línea.
+   PICTURE: el reel de Ñoquis & Asado a pantalla completa; bandas de fotos de borde a borde, sin marcos.
+   COLOUR and TYPE: gris #f2f2f2, tinta #0d0b00, oliva apagado como único acento; Abel + Nunito Sans.
+   LAYOUT: portada en video, banda macro, chef, servicios con íconos, mitades foto/texto, método, reels, grilla, domingo de club, contacto. */
+:root{--paper:#f2f2f2;--white:#fff;--ink:#0d0b00;--ink2:#252319;--stone:#8d8b84;--line:rgba(13,11,0,.12);--olive:#6f7a45;--olive-l:#e7e9da;--dark:#0d0b00}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--ink2);font:400 16px/1.65 "Nunito Sans",system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Abel,"Arial Narrow",sans-serif;font-weight:400;line-height:1.1;letter-spacing:-.018em;margin:0;color:var(--ink);text-wrap:balance}
+h1{font-size:clamp(40px,5.4vw,72px)}
+h2{font-size:clamp(32px,3.6vw,48px)}
+h3{font-size:22px;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(72px,10vw,140px) max(5vw,20px)}
+.eyebrow{font-family:Abel,sans-serif;font-size:17px;color:var(--stone);display:block;margin-bottom:14px}
+.lead{font-size:clamp(16px,1.3vw,18px);color:#4b4940;max-width:36em;font-weight:300}
+.dark{background:var(--dark);color:#d9d7d0}
+.dark h1,.dark h2,.dark h3{color:#fff}
+.dark .lead{color:#bdbab1}
+.dark .eyebrow{color:#9a978e}
+.white{background:var(--white)}
+
+/* buttons, as on M&P */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 30px;border-radius:4px;font:400 16px "Nunito Sans",sans-serif;text-decoration:none;transition:background .3s,color .3s;white-space:nowrap;border:1px solid transparent}
+.btn:focus-visible{outline:2px solid var(--olive);outline-offset:3px}
+.btn-soft{background:var(--olive-l);color:var(--ink)}
+.btn-soft:hover{background:#dadfc4}
+.btn-ghost{border-color:rgba(255,255,255,.75);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-dark{background:rgba(29,29,31,.86);color:#fff}
+.btn-dark:hover{background:#000}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.link{font-family:Abel,sans-serif;font-size:17px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:30;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+nav .wrap{display:flex;align-items:center;gap:28px;padding:14px max(5vw,20px);max-width:none}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-inline-end:auto;font-family:Abel,sans-serif;font-size:21px;letter-spacing:.06em;color:var(--ink)}
+.logo img{height:38px;width:auto}
+.logo{gap:12px;align-items:flex-end}
+.logo .logo-ev{height:11px;margin-bottom:3px}
+@media(max-width:600px){.logo img{height:32px}.logo .logo-ev{height:9px;margin-bottom:2px}.logo{gap:8px}}
+nav .links{display:flex;gap:26px;font-size:15px}
+nav .links a{text-decoration:none;color:#4b4940}
+nav .links a:hover{color:var(--ink)}
+.nav-cta{min-height:40px;padding:0 18px;font-size:15px}
+
+/* hero */
+.hero{position:relative;height:100vh;height:100lvh;min-height:560px;display:grid;align-items:center;overflow:hidden;background:#111}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,11,0,.7),rgba(13,11,0,.25) 60%,rgba(13,11,0,.1)),linear-gradient(0deg,rgba(13,11,0,.4),transparent 40%)}
+.hero-in{position:relative;z-index:2;padding:80px max(5vw,20px) 0;max-width:820px;display:grid;gap:22px}
+.hero .eyebrow{color:rgba(255,255,255,.85);margin:0}
+.hero h1{color:#fff}
+.hero .lead{color:rgba(255,255,255,.88);max-width:30em}
+.hero .cta{margin-top:18px}
+.hero-sound{position:absolute;right:max(5vw,20px);bottom:28px;z-index:3;color:rgba(255,255,255,.8);font-size:14px}
+
+/* macro band */
+.macro{height:100vh;height:100lvh;overflow:hidden}
+.macro img{width:100%;height:100%;object-fit:cover}
+
+/* chef */
+.chef .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(40px,7vw,110px);align-items:center}
+.chef .txt{display:grid;gap:22px}
+.chef img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;border-top:1px solid var(--line);padding-top:24px;margin-top:8px}
+.facts b{display:block;font-family:Abel,sans-serif;font-weight:400;font-size:24px;color:var(--ink);line-height:1.1}
+.facts span{font-size:13px;color:var(--stone)}
+
+/* services list with icons */
+.svc-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end;margin-bottom:clamp(44px,6vw,72px)}
+.svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(36px,5vw,60px) clamp(32px,6vw,96px)}
+.svc li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px 24px;align-items:start}
+.svc svg{grid-row:span 3;width:48px;height:48px;stroke:var(--ink);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.svc p{color:#55534a;font-weight:300}
+.svc .link{justify-self:start;margin-top:8px}
+
+/* half image / half text */
+.half{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(88vh,760px)}
+.half>img{width:100%;height:100%;object-fit:cover;min-height:380px}
+.half .txt{display:grid;align-content:center;gap:20px;padding:clamp(48px,7vw,110px) max(5vw,20px)}
+.half.rev>img{order:2}
+.half ul{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.half li{padding:12px 0;border-bottom:1px solid var(--line);font-weight:300}
+.dark .half ul,.dark .half li{border-color:rgba(255,255,255,.14)}
+
+/* method */
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,6vw,96px);margin:clamp(40px,5vw,64px) 0 clamp(56px,7vw,90px)}
+.duo h3{font-size:clamp(26px,2.6vw,34px);margin-bottom:12px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,40px);counter-reset:s}
+.step{border-top:1px solid rgba(255,255,255,.2);padding-top:20px;display:grid;gap:8px;align-content:start}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:Abel,sans-serif;font-size:15px;color:#9a978e}
+.step p{color:#bdbab1;font-size:15px;font-weight:300}
+
+/* reels: posters, one plays at a time */
+.reels-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:clamp(32px,4vw,48px)}
+.reels{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:2px}
+.reel{position:relative;aspect-ratio:9/16;overflow:hidden;background:#222;cursor:pointer;border:0;padding:0;color:#fff;text-align:left}
+.reel img,.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reel video{opacity:0;transition:opacity .4s}
+.reel.on video{opacity:1}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent 45%);pointer-events:none}
+.reel span{position:absolute;left:14px;bottom:12px;z-index:2;font-family:Abel,sans-serif;font-size:19px}
+.reel i{position:absolute;right:12px;top:12px;z-index:2;width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.35);display:grid;place-items:center;transition:opacity .3s}
+.reel i svg{width:12px;height:12px;fill:#fff}
+.reel.on i{opacity:0}
+.reel:focus-visible{outline:2px solid var(--olive);outline-offset:-2px}
+
+/* grid */
+.ig{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px}
+.ig a{display:block;aspect-ratio:1;overflow:hidden;position:relative}
+.ig img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.ig a:hover img{transform:scale(1.06)}
+.ig a::after{content:attr(data-t);position:absolute;inset:auto 0 0;padding:30px 14px 10px;font-family:Abel,sans-serif;font-size:18px;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent);opacity:0;transition:opacity .4s}
+.ig a:hover::after{opacity:1}
+
+/* sunday */
+.sunday .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:center}
+.sunday .left{display:grid;gap:22px}
+.ticket{background:var(--dark);color:#e8e6df;padding:clamp(32px,4vw,48px);text-align:center;position:relative;margin-top:10px}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:28px;height:28px;border-radius:50%;background:#fff;transform:translateY(-50%)}
+.ticket::before{left:-14px}.ticket::after{right:-14px}
+.ticket small{display:block;color:#9a978e;font-size:13px;margin-bottom:14px}
+.ticket h3{font-size:clamp(42px,4.6vw,58px);color:#fff;line-height:1}
+.ticket h3 i{display:block;font-style:normal;font-size:.5em;color:#b8c08f;margin:4px 0}
+.ticket .q{font-size:17px;margin:18px 0;color:#cfccc4;font-weight:300}
+.ticket .d{font-family:Abel,sans-serif;font-size:20px;letter-spacing:.04em;color:#fff}
+.ticket .m{font-size:13px;color:#9a978e;margin-top:2px}
+.ticket .free{display:inline-block;margin-top:16px;padding:5px 14px;border:1px dashed rgba(255,255,255,.3);border-radius:999px;font-size:13px}
+.sunday .vid{position:relative;aspect-ratio:9/16;max-height:720px;justify-self:center;width:min(100%,400px);overflow:hidden;background:#111}
+.sunday .vid video{width:100%;height:100%;object-fit:cover}
+.day{margin-top:clamp(64px,8vw,110px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px}
+.day figure{margin:0;position:relative;aspect-ratio:3/4;overflow:hidden}
+.day img{width:100%;height:100%;object-fit:cover}
+.day figcaption{position:absolute;inset:auto 0 0;padding:40px 16px 16px;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.7),transparent)}
+.day figcaption small{display:block;font-size:13px;opacity:.85}
+.day figcaption b{font-family:Abel,sans-serif;font-weight:400;font-size:21px;line-height:1.15;display:block}
+.carta-row{margin-top:clamp(64px,8vw,110px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(36px,6vw,96px);align-items:start}
+.carta{margin:0;display:grid}
+.carta div{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.carta div:first-child{border-top:1px solid var(--line)}
+.carta dt{font-family:Abel,sans-serif;font-size:21px;color:var(--ink)}
+.carta div::after{content:"";order:1;flex:1}
+.carta dd{order:2;margin:0;font-size:16px;color:var(--ink);white-space:nowrap}
+.sunday-foot{margin-top:clamp(48px,6vw,72px);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.sunday-foot p{color:#55534a;font-weight:300}
+
+/* contact */
+.contact{position:relative;overflow:hidden}
+.contact>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+.contact .wrap{position:relative;display:grid;gap:22px;max-width:760px;margin:0}
+.contact .alt{display:flex;flex-wrap:wrap;gap:8px 28px;color:#bdbab1;font-size:15px;margin-top:6px}
+.contact .alt a{text-decoration:none}
+footer{background:var(--dark);color:#8d8b84;border-top:1px solid rgba(255,255,255,.1);padding:24px max(5vw,20px);font-size:14px}
+footer .wrap{display:flex;gap:16px 32px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.flogo{height:72px;width:auto;opacity:.92}
+
+
+.ic{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.btn .ic{width:18px;height:18px}
+.ticket h3,.ig-font{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.half li{display:flex;gap:12px;align-items:center}
+.half li .ic{color:var(--olive)}
+.facts div{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 10px;align-items:start}
+.facts .ic{grid-row:span 2;margin-top:3px;color:var(--olive)}
+.step .sic{width:30px;height:30px;stroke:#d9d7d0;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin:2px 0 6px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:clamp(40px,5vw,60px)}
+.contact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;margin-top:20px;max-width:900px}
+.contact-grid a{display:grid;gap:10px;padding:22px 20px;background:rgba(255,255,255,.06);text-decoration:none;transition:background .3s}
+.contact-grid a:hover{background:rgba(255,255,255,.14)}
+.contact-grid .ic{width:28px;height:28px;color:#fff}
+.contact-grid b{font-family:Abel,sans-serif;font-weight:400;font-size:19px;color:#fff}
+.contact-grid span{font-size:14px;color:#bdbab1;overflow-wrap:anywhere}
+@media(max-width:700px){.contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* sunday: full-height video column flush to the edges */
+.sunday{padding:0}
+.sunday .top{grid-template-columns:minmax(0,1fr) minmax(0,min(46vw,56.25vh));gap:0;align-items:stretch;min-height:100vh;min-height:100lvh}
+.sunday .left{padding:clamp(72px,9vw,120px) max(5vw,20px) 0;display:flex;flex-direction:column;gap:22px;max-width:760px;justify-self:end;width:100%}
+.sunday .left .ticket{margin-top:auto}
+.sunday .vid{width:100%;max-height:none;height:100vh;height:100lvh;aspect-ratio:auto;justify-self:stretch}
+.sunday .rest{padding:0 max(5vw,20px) clamp(72px,10vw,140px)}
+@media(max-width:960px){.sunday .top{grid-template-columns:minmax(0,1fr);min-height:0}.sunday .left{padding-bottom:40px;max-width:none}.sunday .vid{height:auto;aspect-ratio:9/16;max-height:90vh}}
+
+/* gallery, after M&P project cards */
+.gal{background:#e4e4e2}
+.filter{margin-bottom:clamp(32px,4vw,48px);max-width:760px}
+.filter-bar{background:var(--ink);color:#fff;text-align:center;padding:12px;border-radius:6px;font-size:16px}
+.chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.chip{min-height:42px;border:0;border-radius:6px;background:#cfcfcc;color:var(--ink);font:400 15px "Nunito Sans",sans-serif;text-align:left;padding:0 18px;cursor:pointer;transition:background .25s,color .25s}
+.chip:hover{background:#c2c2bf}
+.chip[aria-pressed=true]{background:var(--olive);color:#fff}
+.chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,5vw,64px) clamp(24px,3vw,40px)}
+.gcard{display:grid;gap:14px}
+.gcard[hidden]{display:none}
+.track{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:8px;position:relative}
+.track::-webkit-scrollbar{display:none}
+.track img{flex:0 0 88%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;scroll-snap-align:start;background:#ccc}
+.track img:last-child{margin-inline-end:12%}
+.slider{position:relative}
+.nav-b{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.9);display:grid;place-items:center;cursor:pointer;opacity:0;transition:opacity .3s;z-index:2}
+.nav-b svg{width:18px;height:18px;stroke:var(--ink);fill:none;stroke-width:1.8}
+.nav-b.prev{left:10px}.nav-b.prev svg{transform:scaleX(-1)}
+.nav-b.next{right:10px}
+.slider:hover .nav-b{opacity:1}
+.dots{display:flex;justify-content:center;gap:6px}
+.dots i{width:9px;height:9px;border-radius:9px;background:#b9b9b6;transition:width .3s,background .3s}
+.dots i.on{width:26px;background:var(--ink)}
+.gmeta{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--stone);font-size:15px}
+.info{display:inline-flex;align-items:center;gap:10px;background:none;border:0;color:var(--stone);font:inherit;cursor:pointer;padding:4px 0}
+.info .ic{width:22px;height:22px;color:var(--ink)}
+.gcard h3{font-size:clamp(24px,2.2vw,30px)}
+.gcard p{color:#55534a;font-weight:300}
+.gcard .more{display:none;font-size:15px}
+.gcard.open .more{display:block}
+@media(max-width:960px){.cards{grid-template-columns:minmax(0,1fr)}.chips{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(hover:none){.nav-b{display:none}}
+/* full-screen sections and compact buttons */
+.band,.half{min-height:100vh;min-height:100lvh}
+.band{display:flex;flex-direction:column;justify-content:center}
+.band>.wrap{width:100%}
+.btn{min-height:42px;padding:0 20px;font-size:15px}
+@media(max-width:600px){.cta .btn,.cta-row .btn{flex:0 0 auto;padding:0 16px;font-size:14px;min-height:40px}.cta,.cta-row{gap:10px}}
+
+.lang{display:flex;align-items:center;gap:12px;padding-inline-start:20px;border-inline-start:1px solid #c0392b;height:30px}
+.lang .globe{width:24px;height:24px;color:#4b4940}
+.lang a{text-decoration:none;font-size:15px;color:#8d8b84;letter-spacing:.02em}
+.lang a:hover,.lang a[aria-current=page]{color:var(--ink)}
+.lang a[aria-current=page]{font-weight:600}
+@media(max-width:600px){.lang{gap:9px;padding-inline-start:14px}.lang .globe{width:20px;height:20px}.lang a{font-size:14px}}
+
+/* edge to edge on iPhone: cover the status bar and the area behind Safari's floating bar */
+nav .wrap{padding-top:calc(14px + env(safe-area-inset-top));padding-left:max(5vw,20px,env(safe-area-inset-left));padding-right:max(5vw,20px,env(safe-area-inset-right))}
+.hero{height:calc(100lvh + env(safe-area-inset-bottom));min-height:calc(100lvh + env(safe-area-inset-bottom))}
+.macro{height:calc(100lvh + env(safe-area-inset-bottom))}
+.band,.half{min-height:calc(100lvh + env(safe-area-inset-bottom))}
+.hero-in{padding-top:calc(80px + env(safe-area-inset-top))}
+footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+
+/* real full-screen height, measured in JS (iOS Safari leaves the floating-bar area out of vh/lvh) */
+.hero{height:var(--full,100lvh);min-height:var(--full,100lvh)}
+.macro{height:var(--full,100lvh)}
+.band,.half{min-height:var(--full,100lvh)}
+.sunday .top{min-height:var(--full,100lvh)}
+.sunday .vid{height:var(--full,100lvh)}
+@media(max-width:960px){.sunday .vid{height:auto}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media(max-width:960px){
+ nav .links{display:none}
+ .chef .wrap,.svc-head,.half,.sunday .top,.carta-row,.duo{grid-template-columns:minmax(0,1fr)}
+ .half.rev>img{order:0}
+ .half>img{height:62vw}
+ .svc{grid-template-columns:minmax(0,1fr)}
+ .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .reels{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .ig{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .day{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .day figure:last-child{grid-column:span 2;aspect-ratio:2/1.1}
+ .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .steps{grid-template-columns:minmax(0,1fr)}
+ .reels{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .reels .reel:nth-child(n+5){display:none}
+ .ig a::after{display:none}
+ .nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+<script>
+/* full-screen height: the largest of a fixed full-viewport probe, innerHeight and, on phones, the screen itself */
+(()=>{const p=document.createElement('div');p.style.cssText='position:fixed;top:0;bottom:0;left:0;width:1px;visibility:hidden;pointer-events:none';document.documentElement.appendChild(p);
+let last=0;const set=()=>{const coarse=matchMedia('(pointer:coarse)').matches;const portrait=innerHeight>=innerWidth;
+const scr=coarse?(portrait?Math.max(screen.height,screen.width):Math.min(screen.height,screen.width)):0;
+const h=Math.round(Math.max(p.getBoundingClientRect().height,innerHeight,scr));
+if(Math.abs(h-last)>60||!last){last=h;document.documentElement.style.setProperty('--full',h+'px')}};
+set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});addEventListener('resize',()=>{if(!matchMedia('(pointer:coarse)').matches){last=0;set()}});})();
+</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+ <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+ <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1112 20a8 8 0 01-4-1z"/><path d="M9 9c0 3 3 6 6 6l1-1.5-2-1-1 1c-1-.5-2-1.5-2.5-2.5l1-1-1-2z"/></symbol>
+ <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6l8.5 7 8.5-7"/></symbol>
+ <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v3a2 2 0 01-2 2A16 16 0 014 5a2 2 0 012-2z"/></symbol>
+ <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8"/></symbol>
+ <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+ <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+ <symbol id="i-menu" viewBox="0 0 24 24"><path d="M7 3v8a2 2 0 002 2v8M5 3v5M9 3v5M17 3c-2 0-3 3-3 6s1 4 3 4v8"/></symbol>
+ <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15M5 19l7-7"/></symbol>
+ <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21c-4 0-6.5-2.6-6.5-6 0-4 3.5-6 3.5-10 3 2 4.5 4 4.5 6 1-1 1.5-2 1.5-3 2 2 3.5 4.3 3.5 7 0 3.4-2.5 6-6.5 6z"/></symbol>
+</svg>
+
+<nav>
+ <div class="wrap">
+  <a class="logo" href="#inicio" aria-label="Oliva Negra Eventos, inici"><img src="../img/logo.png" alt="Oliva Negra" width="95" height="38"><img class="logo-ev" src="../img/eventos.png" alt="/ Eventos" width="80" height="12"></a>
+  <div class="links">
+   <a href="#chef">El xef</a>
+   <a href="#servicios">Serveis</a>
+   <a href="#bodas">Casaments</a>
+   <a href="#empresas">Empreses</a>
+   <a href="#domingos">Diumenges</a>
+  </div>
+  <div class="lang"><svg class="ic globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><a href="../" hreflang="es" lang="es">ES</a><a href="../ca/" hreflang="ca" lang="ca" aria-current="page">CA</a><a href="../en/" hreflang="en" lang="en">EN</a><a href="../fr/" hreflang="fr" lang="fr">FR</a></div>
+  <a class="btn btn-dark nav-cta" href="https://wa.me/34662225270" target="_blank" rel="noopener">Parlem</a>
+ </div>
+</nav>
+
+<header class="hero" id="inicio">
+ <video id="heroVid" src="../media/hero.mp4" poster="../media/hero.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+ <div class="hero-in">
+  <p class="eyebrow">Private Chef &amp; Esdeveniments · Barcelona · Costa Brava</p>
+  <h1>Cuina d'autor. Cada plat, una decisió.</h1>
+  <p class="lead">Sopars privats, casaments i esdeveniments d'empresa amb la firma de Matias Lauper: anys d'ofici a Suïssa, l'Argentina i Itàlia, servits a la teva taula.</p>
+  <div class="cta">
+   <a class="btn btn-soft" href="#servicios">Descobrir <svg class="ic"><use href="#i-arrow"/></svg></a>
+   <a class="btn btn-ghost" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Demanar una proposta</a>
+  </div>
+ </div>
+</header>
+
+<div class="macro"><img src="../img/r-nero.jpg" alt="Espaguetis negres amb cloïsses sobre crema verda" loading="lazy"></div>
+
+<section class="band white chef" id="chef">
+ <div class="wrap">
+  <div class="txt reveal">
+   <span class="eyebrow">El xef</span>
+   <h2>Molts anys de cuina. Tres països. Una sola manera d'entendre la taula.</h2>
+   <p class="lead">Sóc Matias Lauper. Vaig cuinar durant molts anys a Suïssa, l'Argentina i Itàlia, i als tres països vaig tenir els meus propis restaurants. L'últim va ser Oliva Negra, a Barcelona.</p>
+   <p class="lead">Avui Oliva Negra és la meva cuina d'autor en moviment: la porto a casa teva, al teu casament, a la teva empresa o a una taula llarga davant del mar.</p>
+   <div class="facts"><div><svg class="ic"><use href="#i-pin"/></svg><b>Suïssa</b><span>restaurant propi</span></div><div><svg class="ic"><use href="#i-pin"/></svg><b>Argentina</b><span>restaurant propi</span></div><div><svg class="ic"><use href="#i-pin"/></svg><b>Itàlia</b><span>restaurant propi</span></div><div><svg class="ic"><use href="#i-pin"/></svg><b>Barcelona</b><span>Oliva Negra</span></div></div>
+   <div class="cta"><a class="btn btn-dark" href="#servicios">Veure serveis <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Parlem</a></div>
+  </div>
+  <img class="reveal" src="../img/matias.jpg" alt="Matias Lauper, xef d'Oliva Negra, amb jaqueta negra">
+ </div>
+</section>
+
+<section class="band" id="servicios">
+ <div class="wrap">
+  <div class="svc-head reveal">
+   <div><span class="eyebrow">Serveis</span><h2>Quatre maneres de seure a la meva taula.</h2></div>
+   <p class="lead">Cada esdeveniment és diferent, l'exigència és la mateixa: producte, tècnica i un menú pensat només per a aquell moment.</p>
+  </div>
+  <ul class="svc">
+   <li class="reveal"><svg viewBox="0 0 48 48"><path d="M10 30h28M12 30c0-7 5-12 12-12s12 5 12 12M24 18v-3M21 15h6M8 34h32"/></svg><h3>Private Chef</h3><p>Sopars íntims i celebracions a casa. Cuino davant dels teus convidats i serveixo un menú fet per a aquella nit.</p><a class="link" href="#privado">Saber-ne més</a></li>
+   <li class="reveal"><svg viewBox="0 0 48 48"><circle cx="19" cy="27" r="9"/><circle cx="29" cy="27" r="9"/><path d="M21 10l3 5 3-5"/></svg><h3>Casaments</h3><p>De l'aperitiu a l'última copa: un menú que expliqui la vostra història, per a pocs o per a molts convidats.</p><a class="link" href="#bodas">Saber-ne més</a></li>
+   <li class="reveal"><svg viewBox="0 0 48 48"><rect x="9" y="16" width="30" height="22" rx="2"/><path d="M18 16v-4h12v4M9 25h30"/></svg><h3>Empreses</h3><p>Dinars d'equip, presentacions, incentius i sopars amb clients. Gastronomia que es nota en la relació.</p><a class="link" href="#empresas">Saber-ne més</a></li>
+   <li class="reveal"><svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="7"/><path d="M8 36c4-3 8-3 12 0s8 3 12 0 6-2 8-1M24 7v3M37 20h3M8 20h3M33 11l2-2M13 11l-2-2"/></svg><h3>Diumenges de club</h3><p>Esport, piscina i jardí a la Costa Brava, amb ñoquis i asado a la carta. Entrada lliure.</p><a class="link" href="#domingos">Saber-ne més</a></li>
+  </ul>
+ </div>
+</section>
+
+<section class="half white" id="privado">
+ <img src="../img/r-pescado.jpg" alt="Plat d'autor amb col llombarda i ceba cruixent" loading="lazy">
+ <div class="txt reveal">
+  <span class="eyebrow">Private Chef</span>
+  <h2>Casa teva. La meva cuina.</h2>
+  <p class="lead">Arribo amb tot, cuino a la vista i serveixo plat a plat. Tu només t'ocupes dels teus convidats.</p>
+  <ul><li><svg class="ic"><use href="#i-check"/></svg>Menús degustació o sopar a taula</li><li><svg class="ic"><use href="#i-check"/></svg>Cuina en directe, davant dels teus convidats</li><li><svg class="ic"><use href="#i-check"/></svg>A casa teva o on tu triïs</li></ul>
+  <div class="cta"><a class="btn btn-dark" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cal"/></svg>Reservar una data</a><a class="btn btn-line" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg>Escriure</a></div>
+ </div>
+</section>
+
+<section class="half rev" id="bodas">
+ <img src="../img/mesa-evento.jpg" alt="Taula de casament a l'aire lliure" loading="lazy">
+ <div class="txt reveal">
+  <span class="eyebrow">Casaments</span>
+  <h2>El dia del sí, a foc lent.</h2>
+  <p class="lead">Dissenyem junts un menú que expliqui la vostra història: pica-pica, taula servida, estacions o un gran asado sota els llums.</p>
+  <ul><li><svg class="ic"><use href="#i-check"/></svg>Casaments íntims i grans celebracions</li><li><svg class="ic"><use href="#i-check"/></svg>Aperitiu, banquet i ressopó</li><li><svg class="ic"><use href="#i-check"/></svg>Menú a mida, creat per a vosaltres</li></ul>
+  <div class="cta"><a class="btn btn-dark" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Parlem del vostre casament</a><a class="btn btn-line" href="#platos">Veure plats <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+ </div>
+</section>
+
+<section class="half white" id="empresas">
+ <img src="../img/catering.jpg" alt="Taula de càtering a l'aire lliure" loading="lazy">
+ <div class="txt reveal">
+  <span class="eyebrow">Empreses</span>
+  <h2>Equips que s'asseuen a la taula.</h2>
+  <p class="lead">Una experiència gastronòmica per al teu equip o els teus clients, a la teva oficina, en un espai especial o a la Costa Brava.</p>
+  <ul><li><svg class="ic"><use href="#i-check"/></svg>Dinars d'equip, offsites i incentius</li><li><svg class="ic"><use href="#i-check"/></svg>Sopars amb clients i presentacions</li><li><svg class="ic"><use href="#i-check"/></svg>Càtering, cuina en directe i asado</li></ul>
+  <div class="cta"><a class="btn btn-dark" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg>Demanar proposta</a><a class="btn btn-line" href="tel:+34662225270"><svg class="ic"><use href="#i-phone"/></svg>Trucar</a></div>
+ </div>
+</section>
+
+<section class="band dark">
+ <div class="wrap">
+  <div class="reveal"><span class="eyebrow">La manera de treballar</span><h2>Els teus desitjos. El meu ofici.</h2></div>
+  <div class="duo reveal">
+   <div><h3>Si tens desitjos, els creem.</h3><p class="lead">Aquell plat que et recorda un viatge, el vi que vols servir, una al·lèrgia a tenir en compte: tot entra al menú.</p></div>
+   <div><h3>Si busques inspiració, creem receptes a mida.</h3><p class="lead">Et proposo plats nous, pensats per al teu esdeveniment, la teva temporada i la teva gent.</p></div>
+  </div>
+  <div class="steps reveal">
+   <div class="step"><svg class="sic"><use href="#i-chat"/></svg><h3>Conversa</h3><p>Data, lloc, convidats i el que t'imagines. Per WhatsApp, correu o en persona.</p></div>
+   <div class="step"><svg class="sic"><use href="#i-menu"/></svg><h3>Proposta</h3><p>Un menú creat per a tu, amb el seu pressupost. L'ajustem junts.</p></div>
+   <div class="step"><svg class="sic"><use href="#i-leaf"/></svg><h3>Producte</h3><p>Cada ingredient triat segons la temporada i el que demana el plat.</p></div>
+   <div class="step"><svg class="sic"><use href="#i-flame"/></svg><h3>El dia</h3><p>Arribo, cuino i serveixo. Tu gaudeixes amb els teus.</p></div>
+  </div>
+  <div class="cta-row"><a class="btn btn-soft" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Començar la conversa</a><a class="btn btn-ghost" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg>hola@olivanegra.es</a></div>
+ </div>
+</section>
+
+<section class="band white">
+ <div class="wrap">
+  <div class="reels-head reveal">
+   <div><span class="eyebrow">En moviment</span><h2>Foc, mans i taula.</h2></div>
+   <a class="btn btn-line" href="https://www.instagram.com/olivanegra.bcn/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg>Més a Instagram</a>
+  </div>
+  <div class="reels" id="reels"></div>
+ </div>
+</section>
+
+<section class="band gal" id="platos">
+ <div class="wrap">
+  <div class="reels-head reveal">
+   <div><span class="eyebrow">Galeria</span><h2>De la cuina a la taula.</h2></div>
+   <a class="btn btn-dark" href="https://www.instagram.com/olivanegra.bcn/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg>Instagram</a>
+  </div>
+  <div class="filter reveal">
+   <p class="filter-bar">Filtrar per</p>
+   <div class="chips" id="chips"></div>
+  </div>
+  <div class="cards" id="cards"></div>
+ </div>
+</section>
+
+<section class="white sunday" id="domingos">
+  <div class="top">
+   <div class="left reveal">
+    <span class="eyebrow">Diumenges de club</span>
+    <h2>Un diumenge de club a la Costa Brava.</h2>
+    <p class="lead">Vine a jugar, a caminar o a no fer res. Pàdel, tennis, futbol, senderisme per la muntanya i una piscina amb jardí i gandules per a la resta del dia.</p>
+    <div class="ticket">
+     <small>Oliva Negra · Xef &amp; Esdeveniments</small>
+     <h3>Ñoquis <i>&amp;</i> Asado</h3>
+     <p class="q">Perquè és 29, hi ha ñoquis. Perquè és diumenge, hi ha asado.</p>
+     <p class="d">DIUMENGE 29 · NOVEMBRE</p>
+     <p class="m">Begur · Costa Brava</p>
+     <span class="free">Entrada lliure</span>
+    </div>
+   </div>
+   <div class="vid"><video id="sunVid" src="../media/domingo.mp4" poster="../media/domingo.jpg" muted loop playsinline preload="none" aria-label="Reel del diumenge d'asado"></video></div>
+  </div>
+ <div class="rest"><div class="wrap">
+  <div class="day reveal">
+   <figure><img src="../img/padel-foto.jpg" alt="Pista de pàdel entre pins" loading="lazy"><figcaption><small>Matí</small><b>Pàdel, tennis i futbol</b></figcaption></figure>
+   <figure><img src="../media/monte.jpg" alt="Corriol que baixa a una cala" loading="lazy"><figcaption><small>Mig matí</small><b>Senderisme per la muntanya</b></figcaption></figure>
+   <figure><img src="../img/parrilla.jpg" alt="Asado a la graella" loading="lazy"><figcaption><small>Migdia</small><b>Ñoquis &amp; asado</b></figcaption></figure>
+   <figure><img src="../media/piscina.jpg" alt="Piscina amb gandules" loading="lazy"><figcaption><small>Tarda</small><b>Piscina, jardí i gandules</b></figcaption></figure>
+   <figure><img src="../img/atardecer.jpg" alt="Posta de sol sobre la muntanya i el mar" loading="lazy"><figcaption><small>Posta de sol</small><b>Vistes al mar</b></figcaption></figure>
+  </div>
+
+  <div class="carta-row">
+   <div class="reveal"><span class="eyebrow">La carta del diumenge</span><h2>Per recuperar forces.</h2><p class="lead" style="margin-top:16px">A la carta: només pagues el que menges.</p></div>
+   <dl class="carta reveal">
+    <div><dt>Ñoquis</dt><dd>des de 12,50 €</dd></div>
+    <div><dt>Tira d'asado o vacío</dt><dd>14,50 €</dd></div>
+    <div><dt>Bife de chorizo argentí</dt><dd>22,90 €</dd></div>
+    <div><dt>Patates fregides</dt><dd>4,80 €</dd></div>
+    <div><dt>Bons vins</dt><dd>per acompanyar</dd></div>
+   </dl>
+  </div>
+
+  <div class="sunday-foot">
+   <p>Entrada lliure · porta la teva família i amics · la ubicació exacta et arriba en reservar</p>
+   <a class="btn btn-dark" href="https://live.tebi.co/ecom/reservations/884189_4ea9714dccd8cdcf3d8f4c35a17b0e685da1c9920155c0f52ae8c8954e95928b" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cal"/></svg>Apuntar-me al diumenge</a>
+  </div>
+ </div></div>
+</section>
+
+<section class="band dark contact" id="contacto">
+ <img src="../img/r-entrana.jpg" alt="" loading="lazy">
+ <div class="wrap reveal">
+  <span class="eyebrow">Contacte</span>
+  <h2>La teva propera taula comença aquí.</h2>
+  <p class="lead">Explica'm la data, el lloc i quants sereu. Et responc amb una proposta a mida.</p>
+  <div class="cta">
+   <a class="btn btn-soft" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Escriure per WhatsApp</a>
+   <a class="btn btn-ghost" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg>hola@olivanegra.es</a>
+  </div>
+  <div class="contact-grid">
+   <a href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><b>WhatsApp</b><span>+34 662 225 270</span></a>
+   <a href="tel:+34662225270"><svg class="ic"><use href="#i-phone"/></svg><b>Telèfon</b><span>+34 662 225 270</span></a>
+   <a href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg><b>Email</b><span>hola@olivanegra.es</span></a>
+   <a href="https://www.instagram.com/olivanegra.bcn/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg><b>Instagram</b><span>@olivanegra.bcn</span></a>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <img class="flogo" src="../img/logo-eventos-blanco.png" alt="Oliva Negra / Eventos" width="150" height="90" loading="lazy">
+  <span>© 2026 Oliva Negra · Xef &amp; Esdeveniments · Matias Lauper</span>
+  <span>Barcelona · Begur, Costa Brava</span>
+ </div>
+</footer>
+
+<script>
+{
+ const reels=[["parrilla","Asado"],["emplatado","Emplatat"],["costillas","Graella"],["cocina","Matambre"],["piscina","Costa Brava"],["mar","Terrassa"]];
+ const play='<svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg>';
+ document.getElementById('reels').innerHTML=reels.map(([f,t])=>`<button class="reel reveal" type="button" aria-label="Veure vídeo: ${t}"><img src="../media/${f}.jpg" alt="" loading="lazy"><video data-src="../media/${f}.mp4" muted loop playsinline preload="none"></video><i>${play}</i><span>${t}</span></button>`).join('');
+
+ const G=[
+  ["entrantes","Entrants","Per obrir la taula.","Cremes, torrades, burrata i petits mossos per començar.",["r-crema","r-burrata","r-tosta","r-caprese","r-timbal","e-chipirones","r-croqueta","e-brusqueta","r-empanadas","r-patatas","e-bravas"]],
+  ["pastas","Pastes","Pasta fresca, feta a casa.","Spaghetti neri, lasanyes, raviolis, triangoli i ñoquis.",["r-nero","r-pasta","r-lasana","pa-ravioli","r-lasana2","pa-triangoli","noquis-ragu","noquis-horno","pa-lasania"]],
+  ["principales","Principals","Producte, punt i salsa.","Plats d'autor amb peix, carns i verdures de temporada.",["r-pescado","r-entrana","r-salmon","r-bondiola","plato-autor","r-rollo","lomo-alcaucil","r-verduras","r-ensalada"]],
+  ["parrilla","Graella","L'asado, com ha de ser.","Foc lent, bons talls i paciència.",["plancha-romero","parrilla","corte","costillar","chorizos","lomo-papas","marmoleo"]],
+  ["postres","Postres","Per tancar amb alguna cosa dolça.","Postres d'autor i clàssics italians.",["r-postre","p-souffle","p-coulant","p-tiramisu","p-pudding","p-pudding2"]],
+  ["lugares","Llocs","Costa Brava.","Terrassa, jardí, pins i mar: on cuinem els diumenges i els esdeveniments.",["terraza","atardecer","../media/monte","../media/piscina","chiringuito","padel-foto","../media/mar","../media/sobremesa"]],
+  ["eventos","Esdeveniments","Taules que es recorden.","Casaments, sopars privats, celebracions i esdeveniments d'empresa.",["mesa-evento","mesa","noche","evento-gente","cena-jardin","catering","luces","paella"]]
+ ];
+ const arrow='<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+ document.getElementById('chips').innerHTML=[["todo","Tot"],...G.map(g=>[g[0],g[1]])].map(([k,l],i)=>`<button class="chip" type="button" data-k="${k}" aria-pressed="${i===0}">${l}</button>`).join('');
+ document.getElementById('cards').innerHTML=G.map(([k,cat,title,desc,imgs])=>`<article class="gcard reveal" data-k="${k}">
+  <div class="slider"><div class="track">${imgs.map(f=>`<img src="../img/${f}.jpg" alt="${cat}" loading="lazy">`).join('')}</div>
+  <button class="nav-b prev" type="button" aria-label="Anterior">${arrow}</button><button class="nav-b next" type="button" aria-label="Següent">${arrow}</button></div>
+  <div class="dots">${imgs.map((_,i)=>`<i class="${i?'':'on'}"></i>`).join('')}</div>
+  <div class="gmeta"><span>${cat} · ${imgs.length} fotos</span><button class="info" type="button" aria-expanded="false">Info <svg class="ic"><use href="#i-chat"/></svg></button></div>
+  <h3>${title}</h3><p>${desc}</p>
+  <p class="more">T'agradaria una cosa així a la teva taula? <a href="https://wa.me/34662225270" target="_blank" rel="noopener">Escriu-me per WhatsApp</a> i ho dissenyem a la teva mida.</p>
+ </article>`).join('');
+ document.querySelectorAll('.gcard').forEach(c=>{
+  const tr=c.querySelector('.track'),dots=[...c.querySelectorAll('.dots i')],imgs=[...tr.children];
+  const idx=()=>Math.round(tr.scrollLeft/(imgs[0].offsetWidth+10));
+  tr.addEventListener('scroll',()=>{const i=Math.min(idx(),dots.length-1);dots.forEach((d,j)=>d.classList.toggle('on',j===i))},{passive:true});
+  const go=d=>tr.scrollBy({left:d*(imgs[0].offsetWidth+10),behavior:'smooth'});
+  c.querySelector('.prev').addEventListener('click',()=>go(-1));c.querySelector('.next').addEventListener('click',()=>go(1));
+  const ib=c.querySelector('.info');ib.addEventListener('click',()=>{const o=c.classList.toggle('open');ib.setAttribute('aria-expanded',o)});
+ });
+ document.getElementById('chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;const k=b.dataset.k;
+  document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  document.querySelectorAll('.gcard').forEach(c=>{c.hidden=!(k==='todo'||c.dataset.k===k);c.classList.add('in')})});
+
+
+ /* only one reel plays at a time: hover on desktop, tap on touch */
+ let current=null;
+ const stop=r=>{if(!r)return;const v=r.querySelector('video');v.pause();r.classList.remove('on')};
+ const start=r=>{if(current&&current!==r)stop(current);const v=r.querySelector('video');if(!v.src)v.src=v.dataset.src;v.currentTime=0;v.play().then(()=>r.classList.add('on')).catch(()=>{});current=r};
+ const fine=matchMedia('(hover:hover)').matches;
+ document.querySelectorAll('.reel').forEach(r=>{
+  if(fine){r.addEventListener('mouseenter',()=>start(r));r.addEventListener('mouseleave',()=>{stop(r);if(current===r)current=null})}
+  r.addEventListener('click',()=>{if(r.classList.contains('on')){stop(r);current=null}else start(r)});
+ });
+
+ /* the Sunday reel plays only while visible; hero pauses when out of view */
+ const sun=document.getElementById('sunVid'),hero=document.getElementById('heroVid');
+ const vo=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(v===sun&&current){stop(current);current=null}v.play().catch(()=>{})}else v.pause()}),{threshold:.4});
+ vo.observe(sun);vo.observe(hero);
+
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+</script>
+</body>
+</html>
