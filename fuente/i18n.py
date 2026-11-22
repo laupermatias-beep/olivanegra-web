@@ -1,5 +1,7 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Reservar fecha","Reservar data","Book a date","Réserver une date"),
+("Reservar","Reservar","Book","Réserver"),
 ("Del menú","Del menú","From the menu","Au menu"),
 ("Lombarda, crema y cebolla crujiente","Col llombarda, crema i ceba cruixent","Red cabbage, cream and crispy onion","Chou rouge, crème et oignon croustillant"),
 ("Una mesa larga bajo los pinos","Una taula llarga sota els pins","A long table under the pines","Une longue table sous les pins"),

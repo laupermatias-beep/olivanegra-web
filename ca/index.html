@@ -287,6 +287,25 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 .pfig{aspect-ratio:4/5;min-height:0}
 .half.rev>.hfig{order:2}
 @media(max-width:960px){.half>.hfig{height:62vw;min-height:320px}.half.rev>.hfig{order:0}}
+
+.svc-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:14px}
+.svc .link{margin-top:0}
+.svc li{grid-template-columns:64px minmax(0,1fr);gap:8px 28px}
+.svc svg{width:56px;height:56px;stroke-width:1.5}
+.svc h3{font-size:clamp(24px,2.2vw,30px)}
+@media(max-width:600px){.svc li{grid-template-columns:44px minmax(0,1fr);gap:6px 16px}.svc svg{width:40px;height:40px}.svc-cta{gap:14px;flex-wrap:nowrap}.svc-cta .btn{padding:0 14px;font-size:14px}.svc-cta .link{font-size:14px;white-space:nowrap}}
+
+.link{color:#e2582c}
+.link:hover{color:#ff7a47}
+.svcs .svc svg{stroke:#fff;stroke-width:2.2}
+.svcs .svc p{color:#bdbab1}
+.svcs .svc h3{color:#fff}
+.svcs .lead{color:#bdbab1}
+.svc-end{margin-top:clamp(48px,6vw,80px);align-items:center;gap:26px}
+.btn-orange{background:#f2c94c;color:#1a1208;font-weight:600}
+.btn-orange:hover{background:#e6bb3a}
+.link-light{color:#fff}
+.link-light:hover{color:#f2c94c}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
@@ -390,7 +409,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
  </div>
 </section>
 
-<section class="band" id="servicios">
+<section class="band dark svcs" id="servicios">
  <div class="wrap">
   <div class="svc-head reveal">
    <div><span class="eyebrow">Serveis</span><h2>Quatre maneres de seure a la meva taula.</h2></div>
@@ -402,6 +421,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <li class="reveal"><svg viewBox="0 0 48 48"><rect x="9" y="16" width="30" height="22" rx="2"/><path d="M18 16v-4h12v4M9 25h30"/></svg><h3>Empreses</h3><p>Dinars d'equip, presentacions, incentius i sopars amb clients. Gastronomia que es nota en la relació.</p><a class="link" href="#empresas">Saber-ne més</a></li>
    <li class="reveal"><svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="7"/><path d="M8 36c4-3 8-3 12 0s8 3 12 0 6-2 8-1M24 7v3M37 20h3M8 20h3M33 11l2-2M13 11l-2-2"/></svg><h3>Diumenges de club</h3><p>Esport, piscina i jardí a la Costa Brava, amb ñoquis i asado a la carta. Entrada lliure.</p><a class="link" href="#domingos">Saber-ne més</a></li>
   </ul>
+  <div class="cta svc-end reveal"><a class="btn btn-orange" href="https://wa.me/34662225270" target="_blank" rel="noopener">Demanar proposta</a><a class="link link-light" href="#contacto">Contacte</a></div>
  </div>
 </section>
 
