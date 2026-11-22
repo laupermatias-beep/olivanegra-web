@@ -479,6 +479,11 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 .hero-slides .hs:nth-child(even){animation-name:hsFade2}
 @keyframes hsFade2{0%{opacity:0;transform:scale(1.2) translate(2%,1%)}6%{opacity:1}20%{opacity:1}28%{opacity:0;transform:scale(1.03) translate(0,0)}100%{opacity:0;transform:scale(1.03) translate(0,0)}}
 .hero-in{top:-50px}
+
+/* photos aligned with the text margins */
+.half>.hfig{margin:max(2vw,12px) 0 max(2vw,12px) max(5vw,20px)}
+.half.rev>.hfig{margin:max(2vw,12px) max(5vw,20px) max(2vw,12px) 0}
+@media(max-width:960px){.half>.hfig,.half.rev>.hfig{margin:max(5vw,20px) max(5vw,20px) 0}}
 </style>
 </head>
 <body>
