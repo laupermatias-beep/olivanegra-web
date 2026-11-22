@@ -1,5 +1,8 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Escríbeme","Escriu-me","Message me","Écrivez-moi"),
+("Diseñar vuestra boda","Dissenyar el vostre casament","Plan your wedding","Imaginer votre mariage"),
+("Propuesta para empresas","Proposta per a empreses","Proposal for companies","Proposition entreprises"),
 ("Barcelona y Begur · Evento privado","Barcelona i Begur · Esdeveniment privat","Barcelona and Begur · Private event","Barcelone et Begur · Événement privé"),
 ("Evento privado · Costa Brava","Esdeveniment privat · Costa Brava","Private event · Costa Brava","Événement privé · Costa Brava"),
 ("Reseñas","Ressenyes","Reviews","Avis"),
