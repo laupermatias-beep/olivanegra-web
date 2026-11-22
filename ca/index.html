@@ -368,6 +368,15 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 .dark,.svcs,footer{background:#252319}
 .nav-cta{min-height:40px;padding:6px 18px;font-size:16px}
 @media(max-width:600px){.btn{font-size:16px;padding:8px 18px;min-height:42px}.link{font-size:16px}}
+
+/* header alignment: tagline and language divider sit on the logo's baseline, divider as tall as the logo */
+.logo{align-items:flex-end;gap:12px}
+.logo .logo-ev{margin-bottom:1px}
+.lang{height:38px;align-items:flex-end;padding-bottom:0}
+.lang .globe{width:30px;height:30px;margin-bottom:-3px}
+.lang a{line-height:1;margin-bottom:1px}
+@media(max-width:600px){.lang{height:38px}.lang .globe{width:26px;height:26px;margin-bottom:-2px}.logo .logo-ev{margin-bottom:1px}}
+@media(max-width:400px){.lang{height:34px}.lang .globe{width:24px;height:24px}}
 </style>
 </head>
 <body>
