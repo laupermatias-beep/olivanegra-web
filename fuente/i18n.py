@@ -1,7 +1,7 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
 ("Oliva Negra, inicio","Oliva Negra, inici","Oliva Negra, home","Oliva Negra, accueil"),
-("Oliva Negra Eventos, inicio","Oliva Negra Eventos, inici","Oliva Negra Eventos, home","Oliva Negra Eventos, accueil"),
+("Oliva Negra Chef & Eventos, inicio","Oliva Negra Chef & Eventos, inici","Oliva Negra Chef & Eventos, home","Oliva Negra Chef & Eventos, accueil"),
 ("El chef","El xef","The chef","Le chef"),
 ("Servicios","Serveis","Services","Services"),
 ("Bodas","Casaments","Weddings","Mariages"),
