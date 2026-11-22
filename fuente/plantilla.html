@@ -47,7 +47,10 @@ p{margin:0}
 .btn-dark:hover{background:#000}
 .btn-line{border-color:var(--ink);color:var(--ink)}
 .btn-line:hover{background:var(--ink);color:#fff}
-.link{font-family:Abel,sans-serif;font-size:17px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.link{display:inline-flex;align-items:center;gap:6px;font-family:"Nunito Sans",sans-serif;font-weight:600;font-size:15px;color:#e07020;text-decoration:none;transition:gap .25s,color .25s}
+.link::after{content:"›";font-size:20px;line-height:1;transform:translateY(-1px)}
+.link:hover{gap:10px;color:#c25e12}
+.link:focus-visible{outline:2px solid #e07020;outline-offset:3px}
 .cta{display:flex;gap:14px;flex-wrap:wrap}
 
 /* nav */
