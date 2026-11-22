@@ -377,6 +377,21 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 .lang a{line-height:1;margin-bottom:1px}
 @media(max-width:600px){.lang{height:38px}.lang .globe{width:26px;height:26px;margin-bottom:-2px}.logo .logo-ev{margin-bottom:1px}}
 @media(max-width:400px){.lang{height:34px}.lang .globe{width:24px;height:24px}}
+
+/* calm hero: slow crossfade + gentle zoom (Ken Burns), 6s per photo */
+.hero-slides{position:absolute;inset:0;overflow:hidden;background:#111}
+.hero-slides .hs{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:hsFade 30s infinite;animation-delay:calc(var(--i) * 6s);transform-origin:50% 60%}
+@keyframes hsFade{0%{opacity:0;transform:scale(1.0)}6%{opacity:1}20%{opacity:1}28%{opacity:0;transform:scale(1.09)}100%{opacity:0;transform:scale(1.09)}}
+.hero-slides .hs:first-child{opacity:1}
+@media(prefers-reduced-motion:reduce){.hero-slides .hs{animation:none;opacity:0}.hero-slides .hs:first-child{opacity:1}}
+/* softer photo motion everywhere */
+.reveal{transform:translateY(10px);transition:opacity 1.2s ease,transform 1.2s ease}
+.ig img,.reel img,.track img,.gallery img{transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.ig a:hover img{transform:scale(1.03)}
+.svc:hover .ph img,.gallery figure:hover img{transform:scale(1.03)}
+/* tagline 4px closer to the logo */
+.logo{gap:8px}
+@media(max-width:600px){.logo{gap:6px}}
 </style>
 </head>
 <body>
@@ -420,7 +435,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 </nav>
 
 <header class="hero" id="inicio">
- <video id="heroVid" src="../media/hero.mp4" poster="../media/hero.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+ <div class="hero-slides" aria-hidden="true"><img class="hs" src="../img/r-pescado.jpg" alt="" style="--i:0"><img class="hs" src="../img/plancha-romero.jpg" alt="" loading="lazy" style="--i:1"><img class="hs" src="../img/r-entrana.jpg" alt="" loading="lazy" style="--i:2"><img class="hs" src="../img/mesa-evento.jpg" alt="" loading="lazy" style="--i:3"><img class="hs" src="../img/r-burrata.jpg" alt="" loading="lazy" style="--i:4"></div>
  <div class="hero-in">
   <p class="eyebrow">Private Chef &amp; Events · Barcelona · Costa Brava</p>
   <h1>Signature cuisine. Every dish, a decision.</h1>
@@ -680,7 +695,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
  /* the Sunday reel plays only while visible; hero pauses when out of view */
  const sun=document.getElementById('sunVid'),hero=document.getElementById('heroVid');
  const vo=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(v===sun&&current){stop(current);current=null}v.play().catch(()=>{})}else v.pause()}),{threshold:.4});
- vo.observe(sun);vo.observe(hero);
+ vo.observe(sun);if(hero)vo.observe(hero);
 
  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
