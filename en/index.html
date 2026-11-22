@@ -424,6 +424,16 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 /* chef portrait: caption back at the bottom */
 .pfig::after{background:linear-gradient(0deg,rgba(13,11,0,.7),rgba(13,11,0,0) 45%)}
 .pfig figcaption{top:auto;bottom:0}
+
+/* more vertical padding on every button */
+.btn{min-height:52px;padding:14px 28px}
+.nav-cta{min-height:44px;padding:10px 20px}
+@media(max-width:600px){.btn{min-height:48px;padding:12px 20px}}
+/* pasta: text + photo fit in one screen, whole plate visible */
+.macro2{height:var(--full,100lvh);min-height:0}
+.macro-img{height:auto;flex:1 1 auto;min-height:0;margin:0;display:flex;justify-content:center;padding:0 max(5vw,20px) clamp(28px,5vh,56px)}
+.macro-img img{height:100%;width:auto;max-width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+@media(max-width:800px){.macro2{height:auto;min-height:var(--full,100lvh);justify-content:center}.macro-img{flex:none;padding-bottom:40px}.macro-img img{width:100%;height:auto;aspect-ratio:1}}
 </style>
 </head>
 <body>
