@@ -392,6 +392,27 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 /* tagline 4px closer to the logo */
 .logo{gap:8px}
 @media(max-width:600px){.logo{gap:6px}}
+
+/* spaghetti section: text on light grey, photo 3/4 of the screen */
+.macro2{background:var(--paper);min-height:var(--full,100lvh);display:flex;flex-direction:column}
+.macro2 .macro-in{position:static;padding:clamp(48px,7vh,88px) max(5vw,20px) clamp(28px,4vh,48px);max-width:1240px;width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 64px;align-items:end}
+.macro2 .macro-in .eyebrow{grid-column:1/-1;color:var(--stone)}
+.macro2 .macro-in h2{color:var(--ink)}
+.macro2 .macro-in .lead{color:#4b4940}
+.macro2 .macro-in .cta{grid-column:2}
+.macro2 .macro-in .btn-soft{background:#252319;border-color:#252319;color:#fff}
+.macro2 .macro-in .btn-soft:hover{background:#0d0b00}
+.macro-img{height:calc(var(--full,100lvh) * .75);flex:none;margin-top:auto;overflow:hidden}
+.macro-img img{width:100%;height:100%;object-fit:cover}
+@media(max-width:800px){.macro2 .macro-in{grid-template-columns:minmax(0,1fr)}.macro2 .macro-in .cta{grid-column:1}}
+/* captions at the top of the photos */
+.hfig::after{background:linear-gradient(180deg,rgba(13,11,0,.65),rgba(13,11,0,0) 45%)}
+.hfig figcaption{top:0;bottom:auto}
+.day figcaption{top:0;bottom:auto;padding:16px 16px 40px;background:linear-gradient(180deg,rgba(0,0,0,.65),transparent)}
+.reel span{top:14px;bottom:auto}
+.reel::after{background:linear-gradient(180deg,rgba(0,0,0,.5),transparent 40%)}
+.reel i{top:auto;bottom:12px}
+.ig a::after{inset:0 0 auto;padding:12px 14px 30px;background:linear-gradient(180deg,rgba(0,0,0,.55),transparent)}
 </style>
 </head>
 <body>
@@ -447,14 +468,14 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
  </div>
 </header>
 
-<section class="macro" id="cocina">
- <img src="../img/r-nero.jpg" alt="Black spaghetti with clams on a green cream" loading="lazy">
- <div class="macro-in reveal">
+<section class="macro2" id="cocina">
+ <div class="macro-in wrap reveal">
   <span class="eyebrow">Our cuisine</span>
   <h2>Fresh pasta, slow fire and seasonal produce.</h2>
   <p class="lead">Signature recipes born between Italy, Argentina and the Mediterranean. Every dish is thought through, tasted and plated for your table.</p>
   <div class="cta"><a class="btn btn-soft" href="#chef">Discover us <svg class="ic"><use href="#i-arrow"/></svg></a></div>
  </div>
+ <div class="macro-img"><img src="../img/r-nero.jpg" alt="Black spaghetti with clams on a green cream" loading="lazy"></div>
 </section>
 
 <section class="band white chef" id="chef">
