@@ -474,6 +474,12 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 .track .sl:last-child{margin-inline-end:12%}
 .day figcaption,.hfig figcaption,.reel span,.reel i{z-index:2}
 @media(max-width:800px){.macro-img .vig{width:100%;height:auto;aspect-ratio:1}}
+
+/* livelier hero zoom with a slow drift, text 50px higher */
+@keyframes hsFade{0%{opacity:0;transform:scale(1.02) translate(0,0)}6%{opacity:1}20%{opacity:1}28%{opacity:0;transform:scale(1.2) translate(-2%,-1.5%)}100%{opacity:0;transform:scale(1.2) translate(-2%,-1.5%)}}
+.hero-slides .hs:nth-child(even){animation-name:hsFade2}
+@keyframes hsFade2{0%{opacity:0;transform:scale(1.2) translate(2%,1%)}6%{opacity:1}20%{opacity:1}28%{opacity:0;transform:scale(1.03) translate(0,0)}100%{opacity:0;transform:scale(1.03) translate(0,0)}}
+.hero-in{top:-50px}
 </style>
 </head>
 <body>
