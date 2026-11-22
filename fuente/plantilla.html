@@ -484,6 +484,19 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 .half>.hfig{margin:max(2vw,12px) 0 max(2vw,12px) max(5vw,20px)}
 .half.rev>.hfig{margin:max(2vw,12px) max(5vw,20px) max(2vw,12px) 0}
 @media(max-width:960px){.half>.hfig,.half.rev>.hfig{margin:max(5vw,20px) max(5vw,20px) 0}}
+
+/* reviews: more air and a very soft divider between them */
+.revs{row-gap:0;column-gap:clamp(40px,6vw,96px)}
+.rev{padding:clamp(40px,5vw,56px) 0;border-top:1px solid rgba(13,11,0,.08);gap:22px}
+.rev-feat{border-top:0;padding-top:0;padding-bottom:clamp(48px,6vw,72px);border-bottom:0}
+.rev figcaption{margin-top:6px}
+
+/* gallery cards: soft divider and more air between them */
+.cards{row-gap:0}
+.gcard{padding:calc(clamp(40px,5vw,64px) + 30px) 0 calc(clamp(40px,5vw,64px) + 30px);border-top:1px solid rgba(13,11,0,.09)}
+.gcard:nth-child(-n+2){border-top:0;padding-top:0}
+@media(max-width:960px){.gcard:nth-child(2){border-top:1px solid rgba(13,11,0,.09);padding-top:calc(clamp(40px,5vw,64px) + 30px)}.gcard{padding-top:70px;padding-bottom:70px}.gcard:first-child{padding-top:0}}
+.gcard[hidden]+.gcard,.gcard:not([hidden]){}
 </style>
 </head>
 <body>
@@ -771,7 +784,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
  });
  document.getElementById('chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;const k=b.dataset.k;
   document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===b));
-  document.querySelectorAll('.gcard').forEach(c=>{c.hidden=!(k==='todo'||c.dataset.k===k);c.classList.add('in')})});
+  document.querySelectorAll('.gcard').forEach(c=>{c.hidden=!(k==='todo'||c.dataset.k===k);c.classList.add('in');c.style.borderTop='';c.style.paddingTop=''});if(k!=='todo'){const v=document.querySelector('.gcard:not([hidden])');if(v){v.style.borderTop='0';v.style.paddingTop='0'}}});
 
 
  /* only one reel plays at a time: hover on desktop, tap on touch */
