@@ -434,6 +434,25 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 .macro-img{height:auto;flex:1 1 auto;min-height:0;margin:0;display:flex;justify-content:center;padding:0 max(5vw,20px) clamp(28px,5vh,56px)}
 .macro-img img{height:100%;width:auto;max-width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
 @media(max-width:800px){.macro2{height:auto;min-height:var(--full,100lvh);justify-content:center}.macro-img{flex:none;padding-bottom:40px}.macro-img img{width:100%;height:auto;aspect-ratio:1}}
+
+/* photos never touch the screen edge: same 6px corners as the buttons */
+.half>.hfig{margin:max(2vw,12px);border-radius:6px}
+.pfig,.hfig{border-radius:6px}
+.macro-img img,.track img,.reel,.day figure,.ig a,.svc .ph,.sunday .vid,.about .ph{border-radius:6px}
+.reels,.day,.ig{gap:8px}
+.day{padding:0}
+.sunday .vid{margin:max(2vw,12px);height:calc(var(--full,100lvh) - 2*max(2vw,12px))}
+.rev-feat,.carta{border-radius:6px}
+@media(max-width:960px){.half>.hfig{margin:12px 12px 0}.sunday .vid{height:auto;margin:0 max(5vw,20px) 40px;justify-self:center}}
+
+/* photo captions: always white, 20px lower */
+.hfig figcaption,.hfig figcaption b,.hfig figcaption small{color:#fff}
+.half.rev .hfig figcaption{display:grid;gap:4px}
+.hfig figcaption{padding-top:calc(clamp(20px,3vw,36px) + 20px)}
+.pfig figcaption{padding-top:clamp(20px,3vw,36px)}
+.day figcaption{padding-top:36px}
+.reel span{top:34px}
+.ig a::after{padding-top:32px}
 </style>
 </head>
 <body>
