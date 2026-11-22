@@ -277,6 +277,16 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 .macro-in h2{color:#fff}
 .macro-in .lead{color:rgba(255,255,255,.88)}
 .macro-in .cta{margin-top:6px}
+
+.hfig{position:relative;margin:0;overflow:hidden;min-height:380px}
+.hfig>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hfig::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,11,0,.7),rgba(13,11,0,0) 45%);pointer-events:none}
+.hfig figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:clamp(20px,3vw,36px);color:#fff;display:grid;gap:4px}
+.hfig small{font-size:14px;opacity:.85}
+.hfig b{font-family:Abel,sans-serif;font-weight:400;font-size:clamp(22px,2.2vw,30px);line-height:1.15}
+.pfig{aspect-ratio:4/5;min-height:0}
+.half.rev>.hfig{order:2}
+@media(max-width:960px){.half>.hfig{height:62vw;min-height:320px}.half.rev>.hfig{order:0}}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
@@ -376,7 +386,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <div class="facts"><div><svg class="ic"><use href="#i-pin"/></svg><b>Suisse</b><span>restaurant propre</span></div><div><svg class="ic"><use href="#i-pin"/></svg><b>Argentine</b><span>restaurant propre</span></div><div><svg class="ic"><use href="#i-pin"/></svg><b>Italie</b><span>restaurant propre</span></div><div><svg class="ic"><use href="#i-pin"/></svg><b>Barcelone</b><span>Oliva Negra</span></div></div>
    <div class="cta"><a class="btn btn-dark" href="#servicios">Voir les services <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Parlons-en</a></div>
   </div>
-  <img class="reveal" src="../img/matias.jpg" alt="Matias Lauper, chef d'Oliva Negra, en veste noire">
+  <figure class="hfig pfig reveal"><img src="../img/matias.jpg" alt="Matias Lauper, chef d'Oliva Negra, en veste noire"><figcaption><small>Chef</small><b>Matias Lauper</b></figcaption></figure>
  </div>
 </section>
 
@@ -396,7 +406,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 </section>
 
 <section class="half white" id="privado">
- <img src="../img/r-pescado.jpg" alt="Assiette d'auteur au chou rouge et oignon croustillant" loading="lazy">
+ <figure class="hfig"><img src="../img/r-pescado.jpg" alt="Assiette d'auteur au chou rouge et oignon croustillant" loading="lazy"><figcaption><small>Au menu</small><b>Chou rouge, crème et oignon croustillant</b></figcaption></figure>
  <div class="txt reveal">
   <span class="eyebrow">Private Chef</span>
   <h2>Chez vous. Ma cuisine.</h2>
@@ -407,7 +417,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 </section>
 
 <section class="half rev" id="bodas">
- <img src="../img/mesa-evento.jpg" alt="Table de mariage en plein air" loading="lazy">
+ <figure class="hfig"><img src="../img/mesa-evento.jpg" alt="Table de mariage en plein air" loading="lazy"><figcaption><small>Mariages</small><b>Une longue table sous les pins</b></figcaption></figure>
  <div class="txt reveal">
   <span class="eyebrow">Mariages</span>
   <h2>Le jour du oui, à feu doux.</h2>
@@ -418,7 +428,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 </section>
 
 <section class="half white" id="empresas">
- <img src="../img/catering.jpg" alt="Table de traiteur en plein air" loading="lazy">
+ <figure class="hfig"><img src="../img/catering.jpg" alt="Table de traiteur en plein air" loading="lazy"><figcaption><small>Entreprises</small><b>Traiteur pour les équipes, en plein air</b></figcaption></figure>
  <div class="txt reveal">
   <span class="eyebrow">Entreprises</span>
   <h2>Des équipes qui se mettent à table.</h2>

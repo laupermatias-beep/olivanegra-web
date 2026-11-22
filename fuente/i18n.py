@@ -1,5 +1,10 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Del menú","Del menú","From the menu","Au menu"),
+("Lombarda, crema y cebolla crujiente","Col llombarda, crema i ceba cruixent","Red cabbage, cream and crispy onion","Chou rouge, crème et oignon croustillant"),
+("Una mesa larga bajo los pinos","Una taula llarga sota els pins","A long table under the pines","Une longue table sous les pins"),
+("Catering para equipos, al aire libre","Càtering per a equips, a l'aire lliure","Catering for teams, outdoors","Traiteur pour les équipes, en plein air"),
+("Chef","Xef","Chef","Chef"),
 ("Nuestra cocina","La nostra cuina","Our cuisine","Notre cuisine"),
 ("Pasta fresca, fuego lento y producto de temporada.","Pasta fresca, foc lent i producte de temporada.","Fresh pasta, slow fire and seasonal produce.","Pâtes fraîches, feu doux et produits de saison."),
 ("Recetas de autor que nacen entre Italia, Argentina y el Mediterráneo. Cada plato se piensa, se prueba y se emplata para tu mesa.","Receptes d'autor que neixen entre Itàlia, l'Argentina i la Mediterrània. Cada plat es pensa, es tasta i s'emplata per a la teva taula.","Signature recipes born between Italy, Argentina and the Mediterranean. Every dish is thought through, tasted and plated for your table.","Des recettes d'auteur nées entre l'Italie, l'Argentine et la Méditerranée. Chaque assiette est pensée, goûtée et dressée pour votre table."),
