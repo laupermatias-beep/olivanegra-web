@@ -329,6 +329,44 @@ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
  .ig a::after{display:none}
  .nav-cta{display:none}
 }
+
+
+.rev-head{display:grid;gap:16px;max-width:760px;margin-bottom:clamp(40px,5vw,64px)}
+.rev-lead{font-weight:600;font-size:clamp(18px,1.6vw,22px);color:var(--ink)}
+.rev-score{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:#55534a;font-size:15px}
+.rev-score b{color:var(--ink);font-size:17px}
+.stars{display:flex;gap:6px}
+.stars svg{width:30px;height:30px;fill:#e8892f}
+.stars.sm{gap:3px}.stars.sm svg{width:17px;height:17px}
+.revs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,5vw,72px) clamp(32px,5vw,80px)}
+.rev{margin:0;display:grid;gap:18px;align-content:start}
+.rev blockquote{margin:0;font-family:Abel,sans-serif;font-size:clamp(24px,2.3vw,32px);line-height:1.25;color:var(--ink)}
+.rev figcaption{display:grid;gap:2px}
+.rev figcaption b{font-weight:600;color:var(--ink)}
+.rev figcaption span{font-size:14px;color:var(--stone)}
+@media(max-width:800px){.revs{grid-template-columns:minmax(0,1fr)}}
+.rev-feat{grid-column:1/-1;padding-bottom:clamp(32px,4vw,48px);border-bottom:1px solid var(--line)}
+.rev-feat blockquote{font-size:clamp(28px,3.2vw,44px);max-width:22em}
+/* M&P button and colour system */
+:root{--dark:#252319}
+.btn{border-radius:6px;min-height:45px;padding:10px 24px;font:500 18px "Nunito Sans",sans-serif;border:1px solid transparent;transition:border-color .2s,background-color .2s,color .2s;transform:none!important}
+.btn-soft{background:#fff1ec;border-color:#fff1ec;color:#0d0b00}
+.btn-soft:hover{background:#fff;border-color:#fff}
+.btn-ghost{background:transparent;border-color:#fff;color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-dark{background:#252319;border-color:#252319;color:#fff}
+.btn-dark:hover{background:#0d0b00;border-color:#0d0b00}
+.btn-line{background:transparent;border-color:#0d0b00;color:#0d0b00}
+.btn-line:hover{background:#0d0b00;color:#fff}
+.btn-orange{background:#ffd700;border-color:#ffd700;color:#0d0b00;font-weight:500}
+.btn-orange:hover{background:#f0c800;border-color:#f0c800}
+.link{font:500 18px "Nunito Sans",sans-serif;color:#d44119;gap:10px}
+.link::after{content:"";width:9px;height:9px;border-right:2px solid currentColor;border-top:2px solid currentColor;transform:rotate(45deg);margin-inline-start:2px}
+.link:hover{color:#ef5a2f;gap:14px}
+.link-light{color:#fff}.link-light:hover{color:#ffd700}
+.dark,.svcs,footer{background:#252319}
+.nav-cta{min-height:40px;padding:6px 18px;font-size:16px}
+@media(max-width:600px){.btn{font-size:16px;padding:8px 18px;min-height:42px}.link{font-size:16px}}
 </style>
 </head>
 <body>
@@ -540,6 +578,18 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <a class="btn btn-dark" href="https://live.tebi.co/ecom/reservations/884189_4ea9714dccd8cdcf3d8f4c35a17b0e685da1c9920155c0f52ae8c8954e95928b" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cal"/></svg>Apuntarme al domingo</a>
   </div>
  </div></div>
+</section>
+
+<section class="band white reviews" id="resenas">
+ <div class="wrap">
+  <div class="rev-head reveal">
+   <span class="eyebrow">Reseñas</span>
+   <h2>Lo que nos mueve.</h2>
+   <p class="rev-lead">Lo que aprendí en años de restaurante, hoy lo llevo a tu mesa.</p>
+   <p class="rev-score"><span class="stars sm"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></span> <b>4,1</b> · 397 reseñas en Google del restaurante Oliva Negra, Barcelona</p>
+  </div>
+  <div class="revs"><figure class="rev rev-feat reveal"><div class="stars" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></div><blockquote lang="es">“Te felicito por tu profesionalidad. Estuvo todo de 12 sobre 10. Organización, comida, entorno, todo fantástico. La gente estuvo encantada.”</blockquote><figcaption><b>Meme</b><span>Evento privado · Costa Brava</span></figcaption></figure><figure class="rev reveal"><div class="stars" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></div><blockquote lang="en">“We were so positively surprised because it was served nicely plated and it was as tasty as it looked.”</blockquote><figcaption><b>Jessica T.</b><span>Google · agosto 2022</span></figcaption></figure><figure class="rev reveal"><div class="stars" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></div><blockquote lang="en">“Very good food, I'm ready to say best in Barcelona!”</blockquote><figcaption><b>An G.</b><span>Google · octubre 2022</span></figcaption></figure><figure class="rev reveal"><div class="stars" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></div><blockquote lang="en">“Very friendly, good food, in a pleasant, cozy atmosphere.”</blockquote><figcaption><b>Edward C.</b><span>Google · marzo 2024</span></figcaption></figure><figure class="rev reveal"><div class="stars" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></div><blockquote lang="en">“Lovely place to spend an afternoon with friends.”</blockquote><figcaption><b>Chloe J.</b><span>Google · noviembre 2023</span></figcaption></figure></div>
+ </div>
 </section>
 
 <section class="band dark contact" id="contacto">

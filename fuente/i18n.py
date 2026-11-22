@@ -1,5 +1,15 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Evento privado · Costa Brava","Esdeveniment privat · Costa Brava","Private event · Costa Brava","Événement privé · Costa Brava"),
+("Reseñas","Ressenyes","Reviews","Avis"),
+("Lo que nos mueve.","El que ens mou.","What drives us.","Ce qui nous anime."),
+("Lo que aprendí en años de restaurante, hoy lo llevo a tu mesa.","El que vaig aprendre en anys de restaurant, avui ho porto a la teva taula.","What I learned in years of running restaurants, I now bring to your table.","Ce que j'ai appris en des années de restaurant, je l'apporte aujourd'hui à votre table."),
+("· 397 reseñas en Google del restaurante Oliva Negra, Barcelona","· 397 ressenyes a Google del restaurant Oliva Negra, Barcelona","· 397 Google reviews of the Oliva Negra restaurant, Barcelona","· 397 avis Google du restaurant Oliva Negra, Barcelone"),
+("Google · agosto 2022","Google · agost 2022","Google · August 2022","Google · août 2022"),
+("Google · octubre 2022","Google · octubre 2022","Google · October 2022","Google · octobre 2022"),
+("Google · marzo 2024","Google · març 2024","Google · March 2024","Google · mars 2024"),
+("Google · noviembre 2023","Google · novembre 2023","Google · November 2023","Google · novembre 2023"),
+("5 de 5 estrellas","5 de 5 estrelles","5 out of 5 stars","5 étoiles sur 5"),
 ("Reservar fecha","Reservar data","Book a date","Réserver une date"),
 ("Reservar","Reservar","Book","Réserver"),
 ("Del menú","Del menú","From the menu","Au menu"),
