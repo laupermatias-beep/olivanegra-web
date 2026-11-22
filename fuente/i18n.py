@@ -1,5 +1,6 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Barcelona y Begur · Evento privado","Barcelona i Begur · Esdeveniment privat","Barcelona and Begur · Private event","Barcelone et Begur · Événement privé"),
 ("Evento privado · Costa Brava","Esdeveniment privat · Costa Brava","Private event · Costa Brava","Événement privé · Costa Brava"),
 ("Reseñas","Ressenyes","Reviews","Avis"),
 ("Lo que nos mueve.","El que ens mou.","What drives us.","Ce qui nous anime."),
