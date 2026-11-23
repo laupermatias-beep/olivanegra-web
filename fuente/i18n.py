@@ -1,7 +1,7 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
 ("para 2","per a 2","for 2","pour 2"),
-("2 chorizos criollos, morcilla, tira de asado y vacío","2 xoriços criollos, botifarra negra, tira d'asado i vacío","2 chorizo sausages, morcilla, short ribs and flank steak","2 chorizos criollos, boudin noir, plat de côtes et bavette"),
+("2 chorizos criollos, morcilla, tira de asado, vacío y papas fritas","2 xoriços criollos, botifarra negra, tira d'asado, vacío i patates fregides","2 chorizo sausages, morcilla, short ribs, flank steak and fries","2 chorizos criollos, boudin noir, plat de côtes, bavette et frites"),
 ("Bife de chorizo, 2 chorizos criollos, morcilla, tira de asado, vacío y papas fritas","Bife de chorizo, 2 xoriços criollos, botifarra negra, tira d'asado, vacío i patates fregides","Bife de chorizo, 2 chorizo sausages, morcilla, short ribs, flank steak and fries","Bife de chorizo, 2 chorizos criollos, boudin noir, plat de côtes, bavette et frites"),
 ("45,90 €","45,90 €","€45.90","45,90 €"),
 ("64,90 €","64,90 €","€64.90","64,90 €"),
