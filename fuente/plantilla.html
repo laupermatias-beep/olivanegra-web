@@ -728,6 +728,18 @@ h3{font-size:clamp(22px,1.8vw,26px)}
 .contact h2,.contact .lead{text-shadow:0 1px 16px rgba(0,0,0,.45)}
 footer{background:#0f0e0b}
 @media(max-width:600px){.lang>*{transform:translateY(7px)}}
+
+/* parrilladas para 2, highlighted at the top of the carta */
+.carta .combo{background:#171717;color:#fff;border-radius:6px;padding:18px 20px;margin-bottom:10px;border:0;align-items:flex-start}
+.carta .combo dt{color:#fff;display:grid;gap:4px;font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:clamp(22px,1.9vw,26px);line-height:1.15}
+.carta .combo dt .from{font-family:"Nunito Sans",sans-serif;font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#5eb0ff;margin:0;order:-1}
+.carta .combo dt small{font-family:"Nunito Sans",sans-serif;font-weight:400;font-size:15px;line-height:1.45;color:#d4d2cb}
+.carta .combo dd{color:#ffd700;font-family:Montserrat,sans-serif;font-weight:700;font-size:20px;white-space:nowrap;padding-top:22px}
+.carta .combo+div:not(.combo){margin-top:8px}
+.carta .combo::after{display:none}
+.carta .combo dt{flex:1 1 auto}
+.carta .combo dd{flex:none}
+@media(max-width:600px){.carta .combo{padding:16px}.carta .combo dd{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.mnu,.mnu.open,.mnu .mnu-list li,.mnu .mnu-side>*{transition:none}}
 </style>
 </head>
@@ -953,6 +965,8 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   <div class="carta-row" id="carta">
    <div class="reveal"><span class="eyebrow"><b class="n">07</b>La carta del domingo</span><h2>Para recuperar fuerzas.</h2><p class="lead" style="margin-top:16px">A la carta: pagas solo lo que comes.</p></div>
    <dl class="carta reveal">
+    <div class="combo"><dt>La Pampeana <span class="from">para 2</span><small>2 chorizos criollos, morcilla, tira de asado y vacío</small></dt><dd>45,90 €</dd></div>
+    <div class="combo"><dt>La Estanciera <span class="from">para 2</span><small>Bife de chorizo, 2 chorizos criollos, morcilla, tira de asado, vacío y papas fritas</small></dt><dd>64,90 €</dd></div>
     <div><dt>Ñoquis caseros <span class="from">desde</span></dt><dd>12,50 €</dd></div>
     <div><dt>Bife de chorizo (argentino)</dt><dd>26,90 €</dd></div>
     <div><dt>Ojo de bife (argentino)</dt><dd>26,90 €</dd></div>
