@@ -856,7 +856,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <li class="reveal"><svg viewBox="0 0 48 48"><path d="M10 30h28M12 30c0-7 5-12 12-12s12 5 12 12M24 18v-3M21 15h6M8 34h32"/></svg><h3>Private Chef</h3><p>Cenas íntimas y celebraciones en casa. Cocino frente a tus invitados y sirvo un menú hecho para esa noche.</p><a class="link" href="#privado">Saber más</a></li>
    <li class="reveal"><svg viewBox="0 0 48 48"><circle cx="19" cy="27" r="9"/><circle cx="29" cy="27" r="9"/><path d="M21 10l3 5 3-5"/></svg><h3>Bodas</h3><p>Del aperitivo a la última copa: un menú que cuente vuestra historia, para pocos o para muchos invitados.</p><a class="link" href="#bodas">Saber más</a></li>
    <li class="reveal"><svg viewBox="0 0 48 48"><rect x="9" y="16" width="30" height="22" rx="2"/><path d="M18 16v-4h12v4M9 25h30"/></svg><h3>Empresas</h3><p>Comidas de equipo, presentaciones, incentivos y cenas con clientes. Gastronomía que se nota en la relación.</p><a class="link" href="#empresas">Saber más</a></li>
-   <li class="reveal"><svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="7"/><path d="M8 36c4-3 8-3 12 0s8 3 12 0 6-2 8-1M24 7v3M37 20h3M8 20h3M33 11l2-2M13 11l-2-2"/></svg><h3>Domingos de club</h3><p>Deporte, piscina y jardín en la Costa Brava, con ñoquis y asado a la carta. Entrada libre.</p><a class="link" href="#domingos">Saber más</a></li>
+   <li class="reveal"><svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="7"/><path d="M8 36c4-3 8-3 12 0s8 3 12 0 6-2 8-1M24 7v3M37 20h3M8 20h3M33 11l2-2M13 11l-2-2"/></svg><h3>Domingos de club</h3><p>Deporte, solárium y mar en la Costa Brava, con ñoquis y asado a la carta. Entrada libre.</p><a class="link" href="#domingos">Saber más</a></li>
   </ul>
   <div class="cta svc-end reveal"><a class="btn btn-orange" href="https://wa.me/34662225270" target="_blank" rel="noopener">Pedir propuesta</a><a class="link link-light" href="#contacto">Contacto</a></div>
  </div>
@@ -941,7 +941,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <div class="left reveal">
     <span class="eyebrow"><b class="n">06</b>Domingos de club</span>
     <h2>Un domingo de club en la Costa Brava.</h2>
-    <p class="lead">Ven a jugar, a caminar o a no hacer nada. Pádel, tenis, fútbol, senderismo por el monte y una piscina con jardín y tumbonas para el resto del día.</p>
+    <p class="lead">Ven a jugar, a caminar o a no hacer nada. Pádel, tenis, fútbol, senderismo por el monte y un solárium con vistas al mar, jardín y tumbonas para el resto del día.</p>
     <div class="ticket">
      <small>Oliva Negra · Chef &amp; Eventos</small>
      <h3>Ñoquis <i>&amp;</i> Asado</h3>
@@ -959,7 +959,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <figure><img src="img/padel-foto.jpg" alt="Pista de pádel entre pinos" loading="lazy"><figcaption><small>Mañana</small><b>Pádel, tenis y fútbol</b></figcaption></figure>
    <figure><img src="media/monte.jpg" alt="Sendero que baja a una cala" loading="lazy"><figcaption><small>Media mañana</small><b>Senderismo por el monte</b></figcaption></figure>
    <figure><img src="img/parrilla.jpg" alt="Asado en la parrilla" loading="lazy"><figcaption><small>Mediodía</small><b>Ñoquis &amp; asado</b></figcaption></figure>
-   <figure><img src="media/piscina.jpg" alt="Piscina con tumbonas" loading="lazy"><figcaption><small>Tarde</small><b>Piscina, jardín y tumbonas</b></figcaption></figure>
+   <figure><img src="media/mar.jpg" alt="Vista al mar desde el solárium" loading="lazy"><figcaption><small>Tarde</small><b>Solárium, jardín y mar</b></figcaption></figure>
    <figure><img src="img/atardecer.jpg" alt="Atardecer sobre el monte y el mar" loading="lazy"><figcaption><small>Atardecer</small><b>Vistas al mar</b></figcaption></figure>
   </div>
 
@@ -1049,7 +1049,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 
 <script>
 {
- const reels=[["parrilla","Asado"],["emplatado","Emplatado"],["costillas","Parrilla"],["cocina","Matambre"],["piscina","Costa Brava"],["mar","Terraza"]];
+ const reels=[["parrilla","Asado"],["emplatado","Emplatado"],["costillas","Parrilla"],["cocina","Matambre"],["brasas","Brasas"],["mar","Terraza"]];
  const play='<svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg>';
  document.getElementById('reels').innerHTML=reels.map(([f,t])=>`<button class="reel reveal" type="button" aria-label="Ver video: ${t}"><img src="media/${f}.jpg" alt="" loading="lazy"><video data-src="media/${f}.mp4" muted loop playsinline preload="none"></video><i>${play}</i><span>${t}</span></button>`).join('');
 
@@ -1059,7 +1059,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   ["principales","Principales","Producto, punto y salsa.","Platos de autor con pescado, carnes y verduras de temporada.",["r-pescado","r-entrana","r-salmon","r-bondiola","plato-autor","r-rollo","lomo-alcaucil","r-verduras","r-ensalada"]],
   ["parrilla","Parrilla","El asado, como debe ser.","Fuego lento, buenos cortes y paciencia.",["plancha-romero","parrilla","corte","costillar","chorizos","lomo-papas","marmoleo"]],
   ["postres","Postres","Para cerrar con algo dulce.","Postres de autor y clásicos italianos.",["r-postre","p-souffle","p-coulant","p-tiramisu","p-pudding","p-pudding2"]],
-  ["lugares","Lugares","Costa Brava.","Terraza, jardín, pinos y mar: donde cocinamos los domingos y los eventos.",["terraza","atardecer","../media/monte","../media/piscina","chiringuito","padel-foto","../media/mar","../media/sobremesa"]],
+  ["lugares","Lugares","Costa Brava.","Terraza, jardín, pinos y mar: donde cocinamos los domingos y los eventos.",["terraza","atardecer","../media/monte","chiringuito","padel-foto","../media/mar","../media/sobremesa"]],
   ["eventos","Eventos","Mesas que se recuerdan.","Bodas, cenas privadas, celebraciones y eventos de empresa.",["mesa-evento","mesa","noche","evento-gente","cena-jardin","catering","luces","paella"]]
  ];
  const arrow='<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';

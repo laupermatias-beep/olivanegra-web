@@ -1,5 +1,10 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Brasas","Brases","Embers","Braises"),
+("Deporte, solárium y mar en la Costa Brava, con ñoquis y asado a la carta. Entrada libre.","Esport, solàrium i mar a la Costa Brava, amb ñoquis i asado a la carta. Entrada lliure.","Sport, sun terrace and sea on the Costa Brava, with gnocchi and Argentine asado à la carte. Free entry.","Sport, solarium et mer sur la Costa Brava, avec gnocchis et asado argentin à la carte. Entrée libre."),
+("Ven a jugar, a caminar o a no hacer nada. Pádel, tenis, fútbol, senderismo por el monte y un solárium con vistas al mar, jardín y tumbonas para el resto del día.","Vine a jugar, a caminar o a no fer res. Pàdel, tennis, futbol, senderisme per la muntanya i un solàrium amb vistes al mar, jardí i gandules per a la resta del dia.","Come to play, to walk or to do nothing at all. Padel, tennis, football, hiking in the hills and a sun terrace with sea views, a garden and sun loungers for the rest of the day.","Venez jouer, marcher ou ne rien faire. Padel, tennis, football, randonnée dans les collines et un solarium avec vue sur la mer, jardin et transats pour le reste de la journée."),
+("Vista al mar desde el solárium","Vista al mar des del solàrium","Sea view from the sun terrace","Vue sur la mer depuis le solarium"),
+("Solárium, jardín y mar","Solàrium, jardí i mar","Sun terrace, garden and sea","Solarium, jardin et mer"),
 ("16,50 €","16,50 €","€16.50","16,50 €"),
 ("Tiramisú","Tiramisú","Tiramisu","Tiramisu"),
 ("Helados","Gelats","Ice cream","Glaces"),

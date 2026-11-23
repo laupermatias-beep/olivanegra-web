@@ -856,7 +856,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <li class="reveal"><svg viewBox="0 0 48 48"><path d="M10 30h28M12 30c0-7 5-12 12-12s12 5 12 12M24 18v-3M21 15h6M8 34h32"/></svg><h3>Private Chef</h3><p>Intimate dinners and celebrations at home. I cook in front of your guests and serve a menu made for that night.</p><a class="link" href="#privado">Learn more</a></li>
    <li class="reveal"><svg viewBox="0 0 48 48"><circle cx="19" cy="27" r="9"/><circle cx="29" cy="27" r="9"/><path d="M21 10l3 5 3-5"/></svg><h3>Weddings</h3><p>From the aperitif to the last drink: a menu that tells your story, for a few guests or for many.</p><a class="link" href="#bodas">Learn more</a></li>
    <li class="reveal"><svg viewBox="0 0 48 48"><rect x="9" y="16" width="30" height="22" rx="2"/><path d="M18 16v-4h12v4M9 25h30"/></svg><h3>Companies</h3><p>Team lunches, launches, incentives and client dinners. Food that shows in the relationship.</p><a class="link" href="#empresas">Learn more</a></li>
-   <li class="reveal"><svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="7"/><path d="M8 36c4-3 8-3 12 0s8 3 12 0 6-2 8-1M24 7v3M37 20h3M8 20h3M33 11l2-2M13 11l-2-2"/></svg><h3>Club Sundays</h3><p>Sport, pool and garden on the Costa Brava, with gnocchi and Argentine asado à la carte. Free entry.</p><a class="link" href="#domingos">Learn more</a></li>
+   <li class="reveal"><svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="7"/><path d="M8 36c4-3 8-3 12 0s8 3 12 0 6-2 8-1M24 7v3M37 20h3M8 20h3M33 11l2-2M13 11l-2-2"/></svg><h3>Club Sundays</h3><p>Sport, sun terrace and sea on the Costa Brava, with gnocchi and Argentine asado à la carte. Free entry.</p><a class="link" href="#domingos">Learn more</a></li>
   </ul>
   <div class="cta svc-end reveal"><a class="btn btn-orange" href="https://wa.me/34662225270" target="_blank" rel="noopener">Request a proposal</a><a class="link link-light" href="#contacto">Contact</a></div>
  </div>
@@ -941,7 +941,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <div class="left reveal">
     <span class="eyebrow"><b class="n">06</b>Club Sundays</span>
     <h2>A club Sunday on the Costa Brava.</h2>
-    <p class="lead">Come to play, to walk or to do nothing at all. Padel, tennis, football, hiking in the hills and a pool with a garden and sun loungers for the rest of the day.</p>
+    <p class="lead">Come to play, to walk or to do nothing at all. Padel, tennis, football, hiking in the hills and a sun terrace with sea views, a garden and sun loungers for the rest of the day.</p>
     <div class="ticket">
      <small>Oliva Negra · Chef &amp; Events</small>
      <h3>Ñoquis <i>&amp;</i> Asado</h3>
@@ -959,7 +959,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <figure><img src="../img/padel-foto.jpg" alt="Padel court among pine trees" loading="lazy"><figcaption><small>Morning</small><b>Padel, tennis and football</b></figcaption></figure>
    <figure><img src="../media/monte.jpg" alt="Path down to a cove" loading="lazy"><figcaption><small>Late morning</small><b>Hiking in the hills</b></figcaption></figure>
    <figure><img src="../img/parrilla.jpg" alt="Asado on the grill" loading="lazy"><figcaption><small>Midday</small><b>Gnocchi &amp; asado</b></figcaption></figure>
-   <figure><img src="../media/piscina.jpg" alt="Pool with sun loungers" loading="lazy"><figcaption><small>Afternoon</small><b>Pool, garden and sun loungers</b></figcaption></figure>
+   <figure><img src="../media/mar.jpg" alt="Sea view from the sun terrace" loading="lazy"><figcaption><small>Afternoon</small><b>Sun terrace, garden and sea</b></figcaption></figure>
    <figure><img src="../img/atardecer.jpg" alt="Sunset over the hills and the sea" loading="lazy"><figcaption><small>Sunset</small><b>Sea views</b></figcaption></figure>
   </div>
 
@@ -1049,7 +1049,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 
 <script>
 {
- const reels=[["parrilla","Asado"],["emplatado","Plating"],["costillas","Grill"],["cocina","Matambre"],["piscina","Costa Brava"],["mar","Terrace"]];
+ const reels=[["parrilla","Asado"],["emplatado","Plating"],["costillas","Grill"],["cocina","Matambre"],["brasas","Embers"],["mar","Terrace"]];
  const play='<svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg>';
  document.getElementById('reels').innerHTML=reels.map(([f,t])=>`<button class="reel reveal" type="button" aria-label="Watch video: ${t}"><img src="../media/${f}.jpg" alt="" loading="lazy"><video data-src="../media/${f}.mp4" muted loop playsinline preload="none"></video><i>${play}</i><span>${t}</span></button>`).join('');
 
@@ -1059,7 +1059,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   ["principales","Mains","Produce, timing and sauce.","Signature dishes with fish, meat and seasonal vegetables.",["r-pescado","r-entrana","r-salmon","r-bondiola","plato-autor","r-rollo","lomo-alcaucil","r-verduras","r-ensalada"]],
   ["parrilla","Grill","Asado, the way it should be.","Slow fire, good cuts and patience.",["plancha-romero","parrilla","corte","costillar","chorizos","lomo-papas","marmoleo"]],
   ["postres","Desserts","To finish on something sweet.","Signature desserts and Italian classics.",["r-postre","p-souffle","p-coulant","p-tiramisu","p-pudding","p-pudding2"]],
-  ["lugares","Places","Costa Brava.","Terrace, garden, pine trees and sea: where we cook on Sundays and for events.",["terraza","atardecer","../media/monte","../media/piscina","chiringuito","padel-foto","../media/mar","../media/sobremesa"]],
+  ["lugares","Places","Costa Brava.","Terrace, garden, pine trees and sea: where we cook on Sundays and for events.",["terraza","atardecer","../media/monte","chiringuito","padel-foto","../media/mar","../media/sobremesa"]],
   ["eventos","Events","Tables to remember.","Weddings, private dinners, celebrations and corporate events.",["mesa-evento","mesa","noche","evento-gente","cena-jardin","catering","luces","paella"]]
  ];
  const arrow='<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
