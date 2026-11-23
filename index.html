@@ -604,6 +604,28 @@ html:has(.mnu.open) .totop{opacity:0;pointer-events:none}
 .step::before{color:#2997ff;font:600 13px "Nunito Sans",sans-serif;letter-spacing:.06em}
 .mnu-list>li>a small{color:#2997ff}
 .carta dt .from{color:#8d8b84;font-size:.72em;margin-inline-start:6px}
+.show-m{display:none}
+@media(max-width:600px){.hide-m{display:none}.show-m{display:inline}.contact .cta,#metodo .cta-row{flex-wrap:nowrap}.contact .cta .btn,#metodo .cta-row .btn{flex:1 1 0;padding:0 14px}}
+@media(max-width:380px){.cta .btn,.cta-row .btn{padding:0 12px;font-size:13.5px;gap:8px}.cta,.cta-row,.chef .txt .cta{gap:12px}}
+
+/* footer */
+footer{padding:clamp(56px,7vw,88px) max(5vw,20px) calc(28px + env(safe-area-inset-bottom));color:#9a978e;font-size:15px;border-top:0}
+footer .wrap{display:block;max-width:1240px;margin:0 auto}
+.f-top{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:24px 48px;align-items:end;padding-bottom:clamp(36px,4vw,52px);border-bottom:1px solid rgba(255,255,255,.12)}
+.f-logo{display:block;width:max-content}
+footer .flogo{height:80px;opacity:1}
+.f-claim{color:#bdbab1;font-weight:300;max-width:26em;font-size:16px;line-height:1.5}
+.f-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 32px;padding:clamp(36px,4vw,52px) 0}
+.f-cols h4{margin:0 0 14px;font:600 12px "Nunito Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#2997ff}
+.f-cols div{display:grid;gap:9px;align-content:start}
+.f-cols a,.f-cols span{color:#d9d7d0;text-decoration:none;width:max-content;max-width:100%;transition:color .25s}
+.f-cols a:hover{color:#ffd700}
+.f-bot{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:#7d7a71}
+.f-bot a{color:#9a978e;text-decoration:none}.f-bot a:hover{color:#fff}
+.f-bot a::after{content:" ↑"}
+@media(max-width:960px){.f-top{grid-template-columns:minmax(0,1fr);align-items:start}.f-cols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.f-top .btn{justify-self:start}
+@media(max-width:600px){footer .flogo{height:64px}.f-cols{gap:32px 20px}.f-bot{flex-direction:column}.f-bot a{display:none}}
 @media(prefers-reduced-motion:reduce){.mnu,.mnu.open,.mnu .mnu-list li,.mnu .mnu-side>*{transition:none}}
 </style>
 </head>
@@ -770,7 +792,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <div class="step"><svg class="sic"><use href="#i-leaf"/></svg><h3>Producto</h3><p>Cada ingrediente elegido según la temporada y lo que pide el plato.</p></div>
    <div class="step"><svg class="sic"><use href="#i-flame"/></svg><h3>El día</h3><p>Llego, cocino y sirvo. Tú disfrutas con los tuyos.</p></div>
   </div>
-  <div class="cta-row"><a class="btn btn-soft" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Empezar la conversación</a><a class="btn btn-ghost" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg>hola@olivanegra.es</a></div>
+  <div class="cta-row"><a class="btn btn-soft" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span class="hide-m">Empezar la conversación</span><span class="show-m">WhatsApp</span></a><a class="btn btn-ghost" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg><span class="hide-m">hola@olivanegra.es</span><span class="show-m">Email</span></a></div>
  </div>
 </section>
 
@@ -871,8 +893,8 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   <h2>Tu próxima mesa empieza aquí.</h2>
   <p class="lead">Cuéntame la fecha, el lugar y cuántos seréis. Te respondo con una propuesta a medida.</p>
   <div class="cta">
-   <a class="btn btn-soft" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
-   <a class="btn btn-ghost" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg>hola@olivanegra.es</a>
+   <a class="btn btn-soft" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span class="hide-m">Escribir por WhatsApp</span><span class="show-m">WhatsApp</span></a>
+   <a class="btn btn-ghost" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg><span class="hide-m">hola@olivanegra.es</span><span class="show-m">Email</span></a>
   </div>
   <div class="contact-grid">
    <a href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><b>WhatsApp</b><span>+34 662 225 270</span></a>
@@ -885,9 +907,21 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 
 <footer>
  <div class="wrap">
-  <img class="flogo" src="img/logo-chef-eventos-blanco.png" alt="Oliva Negra · Chef &amp; Eventos" width="150" height="90" loading="lazy">
-  <span>© 2026 Oliva Negra · Chef &amp; Eventos · Matias Lauper</span>
-  <span>Barcelona · Begur, Costa Brava</span>
+  <div class="f-top">
+   <a class="f-logo" href="#inicio"><img class="flogo" src="img/logo-chef-eventos-blanco.png" alt="Oliva Negra · Chef &amp; Eventos" width="150" height="90" loading="lazy"></a>
+   <p class="f-claim">Cocina de autor para cenas privadas, bodas, empresas y domingos de club.</p>
+   <a class="btn btn-orange" href="https://wa.me/34662225270" target="_blank" rel="noopener">Reservar fecha</a>
+  </div>
+  <div class="f-cols">
+   <div><h4>Explorar</h4><a href="#chef">Sobre mí</a><a href="#servicios">Servicios</a><a href="#platos">Galería</a><a href="#carta">Carta y precios</a></div>
+   <div><h4>Eventos</h4><a href="#privado">Private Chef</a><a href="#bodas">Bodas</a><a href="#empresas">Empresas</a><a href="#domingos">Domingos de club</a></div>
+   <div><h4>Contacto</h4><a href="https://wa.me/34662225270" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+34662225270">+34 662 225 270</a><a href="mailto:hola@olivanegra.es">hola@olivanegra.es</a><a href="https://www.instagram.com/olivanegra.bcn/" target="_blank" rel="noopener">@olivanegra.bcn</a></div>
+   <div><h4>Dónde</h4><span>Barcelona</span><span>Begur · Costa Brava</span></div>
+  </div>
+  <div class="f-bot">
+   <span>© 2026 Oliva Negra · Chef &amp; Eventos · Matias Lauper</span>
+   <a href="#inicio">Volver arriba</a>
+  </div>
  </div>
 </footer>
 <a class="totop" href="#inicio" aria-label="Volver arriba"><i aria-hidden="true"></i></a>

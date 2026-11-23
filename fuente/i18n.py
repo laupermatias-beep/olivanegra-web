@@ -1,5 +1,10 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Cocina de autor para cenas privadas, bodas, empresas y domingos de club.","Cuina d'autor per a sopars privats, casaments, empreses i diumenges de club.","Signature cuisine for private dinners, weddings, companies and club Sundays.","Cuisine d'auteur pour dîners privés, mariages, entreprises et dimanches au club."),
+("Explorar","Explorar","Explore","Explorer"),
+("Eventos","Esdeveniments","Events","Événements"),
+("Dónde","On","Where","Où"),
+("Begur · Costa Brava","Begur · Costa Brava","Begur · Costa Brava","Begur · Costa Brava"),
 ("Pan","Pa","Bread","Pain"),
 ("Salsa de ciboulette","Salsa de cibulet","Chive sauce","Sauce à la ciboulette"),
 ("Salsa brava de la casa","Salsa brava de la casa","House brava sauce","Sauce brava maison"),
