@@ -1,5 +1,12 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Pan","Pa","Bread","Pain"),
+("Salsa de ciboulette","Salsa de cibulet","Chive sauce","Sauce à la ciboulette"),
+("Salsa brava de la casa","Salsa brava de la casa","House brava sauce","Sauce brava maison"),
+("Chimichurri y criolla","Chimichurri i criolla","Chimichurri and criolla sauce","Chimichurri et sauce criolla"),
+("incluidos","inclosos","included","inclus"),
+("2,40 €","2,40 €","€2.40","2,40 €"),
+("1,50 €","1,50 €","€1.50","1,50 €"),
 ("desde","des de","from","à partir de"),
 ("12,50 €","12,50 €","€12.50","12,50 €"),
 ("26,90 €","26,90 €","€26.90","26,90 €"),
