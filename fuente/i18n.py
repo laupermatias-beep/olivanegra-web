@@ -1,5 +1,6 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("16,50 €","16,50 €","€16.50","16,50 €"),
 ("Tiramisú","Tiramisú","Tiramisu","Tiramisu"),
 ("Helados","Gelats","Ice cream","Glaces"),
 ("5,50 €","5,50 €","€5.50","5,50 €"),
