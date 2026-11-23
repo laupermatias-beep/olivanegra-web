@@ -550,6 +550,14 @@ nav .links a[aria-current]{color:var(--ink);box-shadow:inset 0 -1.5px 0 #d44119}
  nav:has(.lang.open) .logo .logo-ev{display:none}
 }
 @media(max-width:380px){.lang .globe{width:18px;height:18px}}
+
+/* whole row is the link */
+.mnu-list li{padding:0;gap:0 22px}
+.mnu-list>li>a{flex:1 1 auto;padding:12px 0}
+.mnu-list>li>a::after{content:"";margin-inline-start:auto;align-self:center;width:8px;height:8px;border-right:1.5px solid currentColor;border-top:1.5px solid currentColor;transform:rotate(45deg);opacity:.35;transition:opacity .3s,transform .3s;margin-inline-end:6px}
+.mnu-list>li>a:hover::after,.mnu-list>li>a[aria-current]::after{opacity:1}
+.mnu-list>li:has(>a:hover){background:rgba(255,255,255,.04)}
+.mnu-sub{order:2;width:100%;padding:0 0 12px 36px;margin-top:-6px}
 @media(prefers-reduced-motion:reduce){.mnu,.mnu.open,.mnu .mnu-list li,.mnu .mnu-side>*{transition:none}}
 </style>
 </head>
