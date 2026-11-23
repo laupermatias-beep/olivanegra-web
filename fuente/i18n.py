@@ -1,5 +1,9 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Tiramisú","Tiramisú","Tiramisu","Tiramisu"),
+("Helados","Gelats","Ice cream","Glaces"),
+("5,50 €","5,50 €","€5.50","5,50 €"),
+("3,80 €","3,80 €","€3.80","3,80 €"),
 ("39,90 €","39,90 €","€39.90","39,90 €"),
 ("55,90 €","55,90 €","€55.90","55,90 €"),
 ("2 chorizos criollos, morcilla, tira de asado, vacío, papas fritas, chimichurri y criolla","2 xoriços criollos, botifarra negra, tira d'asado, vacío, patates fregides, chimichurri i criolla","2 chorizo sausages, morcilla, short ribs, flank steak, fries, chimichurri and criolla sauce","2 chorizos criollos, boudin noir, plat de côtes, bavette, frites, chimichurri et sauce criolla"),
