@@ -1,5 +1,6 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Volver arriba","Tornar a dalt","Back to top","Retour en haut"),
 ("Sobre mí","Sobre mi","About me","À propos"),
 ("La carta","La carta","Menu","La carte"),
 ("Menú","Menú","Menu","Menu"),
