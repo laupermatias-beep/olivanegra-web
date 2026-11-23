@@ -595,6 +595,7 @@ html:has(.mnu.open) .totop{opacity:0;pointer-events:none}
 .rv-b:focus-visible{outline:2px solid #d44119;outline-offset:3px}
 @media(max-width:960px){.reviews .rev{flex-basis:calc((100% - 20px)/2)}}
 @media(max-width:600px){.reviews .rev{flex-basis:86%}.reviews .revs{gap:14px}.rv-ctrl{justify-content:flex-start}}
+@media(max-width:600px){.mnu-btn{margin-inline-start:8px}.mnu-btn .bars{gap:8px}.mnu-btn[aria-expanded="true"] .bars i:first-child{transform:translateY(4.8px) rotate(45deg)}.mnu-btn[aria-expanded="true"] .bars i:last-child{transform:translateY(-4.8px) rotate(-45deg)}}
 @media(prefers-reduced-motion:reduce){.mnu,.mnu.open,.mnu .mnu-list li,.mnu .mnu-side>*{transition:none}}
 </style>
 </head>
@@ -818,10 +819,15 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   <div class="carta-row" id="carta">
    <div class="reveal"><span class="eyebrow">La carta del diumenge</span><h2>Per recuperar forces.</h2><p class="lead" style="margin-top:16px">A la carta: només pagues el que menges.</p></div>
    <dl class="carta reveal">
-    <div><dt>Ñoquis</dt><dd>des de 12,50 €</dd></div>
-    <div><dt>Tira d'asado o vacío</dt><dd>14,50 €</dd></div>
-    <div><dt>Bife de chorizo argentí</dt><dd>22,90 €</dd></div>
+    <div><dt>Ñoquis casolans</dt><dd>des de 12,50 €</dd></div>
+    <div><dt>Bife de chorizo (argentí)</dt><dd>26,90 €</dd></div>
+    <div><dt>Ull de bife (argentí)</dt><dd>26,90 €</dd></div>
+    <div><dt>Vacío</dt><dd>16,90 €</dd></div>
+    <div><dt>Tira d'asado</dt><dd>14,20 €</dd></div>
+    <div><dt>Xoriço criollo</dt><dd>7,90 €</dd></div>
+    <div><dt>Botifarra negra</dt><dd>7,50 €</dd></div>
     <div><dt>Patates fregides</dt><dd>4,80 €</dd></div>
+    <div><dt>Amanida mixta</dt><dd>7,90 €</dd></div>
     <div><dt>Bons vins</dt><dd>per acompanyar</dd></div>
    </dl>
   </div>

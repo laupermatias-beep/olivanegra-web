@@ -595,6 +595,7 @@ html:has(.mnu.open) .totop{opacity:0;pointer-events:none}
 .rv-b:focus-visible{outline:2px solid #d44119;outline-offset:3px}
 @media(max-width:960px){.reviews .rev{flex-basis:calc((100% - 20px)/2)}}
 @media(max-width:600px){.reviews .rev{flex-basis:86%}.reviews .revs{gap:14px}.rv-ctrl{justify-content:flex-start}}
+@media(max-width:600px){.mnu-btn{margin-inline-start:8px}.mnu-btn .bars{gap:8px}.mnu-btn[aria-expanded="true"] .bars i:first-child{transform:translateY(4.8px) rotate(45deg)}.mnu-btn[aria-expanded="true"] .bars i:last-child{transform:translateY(-4.8px) rotate(-45deg)}}
 @media(prefers-reduced-motion:reduce){.mnu,.mnu.open,.mnu .mnu-list li,.mnu .mnu-side>*{transition:none}}
 </style>
 </head>
@@ -818,10 +819,15 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   <div class="carta-row" id="carta">
    <div class="reveal"><span class="eyebrow">La carte du dimanche</span><h2>Pour reprendre des forces.</h2><p class="lead" style="margin-top:16px">À la carte : vous ne payez que ce que vous mangez.</p></div>
    <dl class="carta reveal">
-    <div><dt>Ñoquis</dt><dd>à partir de 12,50 €</dd></div>
-    <div><dt>Tira de asado ou vacío</dt><dd>14,50 €</dd></div>
-    <div><dt>Bife de chorizo argentin</dt><dd>22,90 €</dd></div>
+    <div><dt>Gnocchis maison (ñoquis)</dt><dd>à partir de 12,50 €</dd></div>
+    <div><dt>Bife de chorizo (faux-filet argentin)</dt><dd>26,90 €</dd></div>
+    <div><dt>Ojo de bife (entrecôte argentine)</dt><dd>26,90 €</dd></div>
+    <div><dt>Vacío (bavette)</dt><dd>16,90 €</dd></div>
+    <div><dt>Tira de asado (plat de côtes)</dt><dd>14,20 €</dd></div>
+    <div><dt>Chorizo criollo (saucisse argentine)</dt><dd>7,90 €</dd></div>
+    <div><dt>Morcilla (boudin noir)</dt><dd>7,50 €</dd></div>
     <div><dt>Frites</dt><dd>4,80 €</dd></div>
+    <div><dt>Salade mixte</dt><dd>7,90 €</dd></div>
     <div><dt>Bons vins</dt><dd>pour accompagner</dd></div>
    </dl>
   </div>

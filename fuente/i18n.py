@@ -1,5 +1,18 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("26,90 €","26,90 €","€26.90","26,90 €"),
+("16,90 €","16,90 €","€16.90","16,90 €"),
+("14,20 €","14,20 €","€14.20","14,20 €"),
+("7,90 €","7,90 €","€7.90","7,90 €"),
+("7,50 €","7,50 €","€7.50","7,50 €"),
+("Ñoquis caseros","Ñoquis casolans","Homemade gnocchi (ñoquis)","Gnocchis maison (ñoquis)"),
+("Bife de chorizo (argentino)","Bife de chorizo (argentí)","Bife de chorizo (Argentine sirloin)","Bife de chorizo (faux-filet argentin)"),
+("Ojo de bife (argentino)","Ull de bife (argentí)","Ojo de bife (Argentine ribeye)","Ojo de bife (entrecôte argentine)"),
+("Vacío","Vacío","Vacío (flank steak)","Vacío (bavette)"),
+("Tira de asado","Tira d'asado","Tira de asado (short ribs)","Tira de asado (plat de côtes)"),
+("Chorizo criollo","Xoriço criollo","Chorizo criollo (Argentine sausage)","Chorizo criollo (saucisse argentine)"),
+("Morcilla","Botifarra negra","Morcilla (blood sausage)","Morcilla (boudin noir)"),
+("Ensalada mixta","Amanida mixta","Mixed salad","Salade mixte"),
 ("“Te felicito por tu profesionalidad. Estuvo todo de 12 sobre 10. Organización, comida, entorno, todo fantástico. La gente estuvo encantada.”","“Et felicito per la teva professionalitat. Tot va ser de 12 sobre 10. Organització, menjar, entorn, tot fantàstic. La gent va quedar encantada.”","“Congratulations on your professionalism. Everything was 12 out of 10. Organisation, food, setting: all fantastic. Everyone was delighted.”","“Bravo pour ton professionnalisme. Tout était à 12 sur 10. Organisation, cuisine, cadre : tout était fantastique. Les invités étaient ravis.”"),
 ("“Nos sorprendió muchísimo: venía muy bien emplatado y estaba tan rico como se veía.”","“Ens va sorprendre moltíssim: venia molt ben emplatat i era tan bo com semblava.”","“We were so positively surprised because it was served nicely plated and it was as tasty as it looked.”","“Nous avons été très agréablement surpris : c'était joliment dressé et aussi bon que beau.”"),
 ("“Comida buenísima, ¡me atrevo a decir que la mejor de Barcelona!”","“Menjar boníssim, m'atreveixo a dir que el millor de Barcelona!”","“Very good food, I'm ready to say best in Barcelona!”","“Très bonne cuisine, j'ose dire la meilleure de Barcelone !”"),

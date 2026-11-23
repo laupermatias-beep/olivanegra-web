@@ -595,6 +595,7 @@ html:has(.mnu.open) .totop{opacity:0;pointer-events:none}
 .rv-b:focus-visible{outline:2px solid #d44119;outline-offset:3px}
 @media(max-width:960px){.reviews .rev{flex-basis:calc((100% - 20px)/2)}}
 @media(max-width:600px){.reviews .rev{flex-basis:86%}.reviews .revs{gap:14px}.rv-ctrl{justify-content:flex-start}}
+@media(max-width:600px){.mnu-btn{margin-inline-start:8px}.mnu-btn .bars{gap:8px}.mnu-btn[aria-expanded="true"] .bars i:first-child{transform:translateY(4.8px) rotate(45deg)}.mnu-btn[aria-expanded="true"] .bars i:last-child{transform:translateY(-4.8px) rotate(-45deg)}}
 @media(prefers-reduced-motion:reduce){.mnu,.mnu.open,.mnu .mnu-list li,.mnu .mnu-side>*{transition:none}}
 </style>
 </head>
@@ -818,10 +819,15 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   <div class="carta-row" id="carta">
    <div class="reveal"><span class="eyebrow">The Sunday menu</span><h2>To get your strength back.</h2><p class="lead" style="margin-top:16px">À la carte: you only pay for what you eat.</p></div>
    <dl class="carta reveal">
-    <div><dt>Ñoquis</dt><dd>from €12.50</dd></div>
-    <div><dt>Short ribs (tira de asado) or flank (vacío)</dt><dd>€14.50</dd></div>
-    <div><dt>Argentine sirloin (bife de chorizo)</dt><dd>€22.90</dd></div>
+    <div><dt>Homemade gnocchi (ñoquis)</dt><dd>from €12.50</dd></div>
+    <div><dt>Bife de chorizo (Argentine sirloin)</dt><dd>€26.90</dd></div>
+    <div><dt>Ojo de bife (Argentine ribeye)</dt><dd>€26.90</dd></div>
+    <div><dt>Vacío (flank steak)</dt><dd>€16.90</dd></div>
+    <div><dt>Tira de asado (short ribs)</dt><dd>€14.20</dd></div>
+    <div><dt>Chorizo criollo (Argentine sausage)</dt><dd>€7.90</dd></div>
+    <div><dt>Morcilla (blood sausage)</dt><dd>€7.50</dd></div>
     <div><dt>Fries</dt><dd>€4.80</dd></div>
+    <div><dt>Mixed salad</dt><dd>€7.90</dd></div>
     <div><dt>Good wines</dt><dd>to go with it</dd></div>
    </dl>
   </div>
