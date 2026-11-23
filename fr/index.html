@@ -561,6 +561,7 @@ nav .links a[aria-current]{color:var(--ink);box-shadow:inset 0 -1.5px 0 #d44119}
 
 /* back to top */
 .totop{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));z-index:28;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:rgba(37,35,25,.9);color:#fff;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.18);opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .4s,transform .5s cubic-bezier(.22,1,.36,1),background .3s}
+.totop{border:1px solid rgba(255,255,255,.28)}
 .totop.show{opacity:1;transform:none;pointer-events:auto}
 .totop:hover{background:#000}
 .totop:focus-visible{outline:2px solid #d44119;outline-offset:3px}
@@ -596,6 +597,12 @@ html:has(.mnu.open) .totop{opacity:0;pointer-events:none}
 @media(max-width:960px){.reviews .rev{flex-basis:calc((100% - 20px)/2)}}
 @media(max-width:600px){.reviews .rev{flex-basis:86%}.reviews .revs{gap:14px}.rv-ctrl{justify-content:flex-start}}
 @media(max-width:600px){.mnu-btn{margin-inline-start:8px}.mnu-btn .bars{gap:8px}.mnu-btn[aria-expanded="true"] .bars i:first-child{transform:translateY(4.8px) rotate(45deg)}.mnu-btn[aria-expanded="true"] .bars i:last-child{transform:translateY(-4.8px) rotate(-45deg)}}
+
+/* section numbers: red on light backgrounds, Apple blue on dark ones */
+.eyebrow .n{font:600 13px "Nunito Sans",sans-serif;letter-spacing:.06em;color:#d44119;margin-inline-end:12px;vertical-align:1px}
+.dark .eyebrow .n,.svcs .eyebrow .n,.contact .eyebrow .n{color:#2997ff}
+.step::before{color:#2997ff;font:600 13px "Nunito Sans",sans-serif;letter-spacing:.06em}
+.mnu-list>li>a small{color:#2997ff}
 @media(prefers-reduced-motion:reduce){.mnu,.mnu.open,.mnu .mnu-list li,.mnu .mnu-side>*{transition:none}}
 </style>
 </head>
@@ -648,8 +655,8 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <li><a href="#servicios"><small>03</small>Services</a><span class="mnu-sub"><a href="#privado">Private Chef</a><a href="#bodas">Mariages</a><a href="#empresas">Entreprises</a></span></li>
    <li><a href="#metodo"><small>04</small>Ma méthode</a></li>
    <li><a href="#platos"><small>05</small>Galerie</a></li>
-   <li><a href="#carta"><small>06</small>Carte et prix</a></li>
-   <li><a href="#domingos"><small>07</small>Dimanches au club</a></li>
+   <li><a href="#domingos"><small>06</small>Dimanches au club</a></li>
+   <li><a href="#carta"><small>07</small>Carte et prix</a></li>
    <li><a href="#resenas"><small>08</small>Avis</a></li>
    <li><a href="#contacto"><small>09</small>Contact</a></li>
   </ol>
@@ -678,7 +685,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 
 <section class="macro2" id="cocina">
  <div class="macro-in wrap reveal">
-  <span class="eyebrow">Notre cuisine</span>
+  <span class="eyebrow"><b class="n">02</b>Notre cuisine</span>
   <h2>Pâtes fraîches, feu doux et produits de saison.</h2>
   <p class="lead">Des recettes d'auteur nées entre l'Italie, l'Argentine et la Méditerranée. Chaque assiette est pensée, goûtée et dressée pour votre table.</p>
   <div class="cta"><a class="btn btn-soft" href="#chef">Découvrez-nous <svg class="ic"><use href="#i-arrow"/></svg></a></div>
@@ -689,7 +696,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 <section class="band white chef" id="chef">
  <div class="wrap">
   <div class="txt reveal">
-   <span class="eyebrow">Le chef</span>
+   <span class="eyebrow"><b class="n">01</b>Le chef</span>
    <h2>Des années en cuisine. Trois pays. Une seule façon de concevoir la table.</h2>
    <p class="lead">Je suis Matias Lauper. J'ai cuisiné pendant de nombreuses années en Suisse, en Argentine et en Italie, et j'ai eu mes propres restaurants dans ces trois pays. Le dernier était Oliva Negra, à Barcelone.</p>
    <p class="lead">Aujourd'hui, Oliva Negra est ma cuisine d'auteur en mouvement : je l'apporte chez vous, à votre mariage, dans votre entreprise ou sur une longue table face à la mer.</p>
@@ -703,7 +710,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 <section class="band dark svcs" id="servicios">
  <div class="wrap">
   <div class="svc-head reveal">
-   <div><span class="eyebrow">Services</span><h2>Quatre façons de s'asseoir à ma table.</h2></div>
+   <div><span class="eyebrow"><b class="n">03</b>Services</span><h2>Quatre façons de s'asseoir à ma table.</h2></div>
    <p class="lead">Chaque événement est différent, l'exigence reste la même : le produit, la technique et un menu pensé pour ce seul moment.</p>
   </div>
   <ul class="svc">
@@ -751,7 +758,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 
 <section class="band dark" id="metodo">
  <div class="wrap">
-  <div class="reveal"><span class="eyebrow">Ma façon de travailler</span><h2>Vos envies. Mon métier.</h2></div>
+  <div class="reveal"><span class="eyebrow"><b class="n">04</b>Ma façon de travailler</span><h2>Vos envies. Mon métier.</h2></div>
   <div class="duo reveal">
    <div><h3>Si vous avez des envies, nous les créons.</h3><p class="lead">Ce plat qui vous rappelle un voyage, le vin que vous voulez servir, une allergie à respecter : tout entre dans le menu.</p></div>
    <div><h3>Si vous cherchez l'inspiration, nous créons des recettes sur mesure.</h3><p class="lead">Je vous propose de nouveaux plats, pensés pour votre événement, votre saison et vos invités.</p></div>
@@ -779,7 +786,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 <section class="band gal" id="platos">
  <div class="wrap">
   <div class="reels-head reveal">
-   <div><span class="eyebrow">Galerie</span><h2>De la cuisine à la table.</h2></div>
+   <div><span class="eyebrow"><b class="n">05</b>Galerie</span><h2>De la cuisine à la table.</h2></div>
    <a class="btn btn-dark" href="https://www.instagram.com/olivanegra.bcn/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg>Instagram</a>
   </div>
   <div class="filter reveal">
@@ -793,7 +800,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 <section class="white sunday" id="domingos">
   <div class="top">
    <div class="left reveal">
-    <span class="eyebrow">Dimanches au club</span>
+    <span class="eyebrow"><b class="n">06</b>Dimanches au club</span>
     <h2>Un dimanche au club sur la Costa Brava.</h2>
     <p class="lead">Venez jouer, marcher ou ne rien faire. Padel, tennis, football, randonnée dans les collines et une piscine avec jardin et transats pour le reste de la journée.</p>
     <div class="ticket">
@@ -817,7 +824,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   </div>
 
   <div class="carta-row" id="carta">
-   <div class="reveal"><span class="eyebrow">La carte du dimanche</span><h2>Pour reprendre des forces.</h2><p class="lead" style="margin-top:16px">À la carte : vous ne payez que ce que vous mangez.</p></div>
+   <div class="reveal"><span class="eyebrow"><b class="n">07</b>La carte du dimanche</span><h2>Pour reprendre des forces.</h2><p class="lead" style="margin-top:16px">À la carte : vous ne payez que ce que vous mangez.</p></div>
    <dl class="carta reveal">
     <div><dt>Gnocchis maison (ñoquis)</dt><dd>à partir de 12,50 €</dd></div>
     <div><dt>Bife de chorizo (faux-filet argentin)</dt><dd>26,90 €</dd></div>
@@ -842,7 +849,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 <section class="band white reviews" id="resenas">
  <div class="wrap">
   <div class="rev-head reveal">
-   <span class="eyebrow">Avis</span>
+   <span class="eyebrow"><b class="n">08</b>Avis</span>
    <h2>Ce qui nous anime.</h2>
    <p class="rev-lead">Ce que j'ai appris en des années de restaurant, je l'apporte aujourd'hui à votre table.</p>
    <p class="rev-score"><span class="stars sm"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></span> <b>4,1</b> · 397 avis Google du restaurant Oliva Negra, Barcelone</p>
@@ -855,7 +862,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
 <section class="band dark contact" id="contacto">
  <img src="../img/r-entrana.jpg" alt="" loading="lazy">
  <div class="wrap reveal">
-  <span class="eyebrow">Contact</span>
+  <span class="eyebrow"><b class="n">09</b>Contact</span>
   <h2>Votre prochaine table commence ici.</h2>
   <p class="lead">Dites-moi la date, le lieu et combien vous serez. Je vous réponds avec une proposition sur mesure.</p>
   <div class="cta">
