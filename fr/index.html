@@ -626,6 +626,56 @@ footer .flogo{height:80px;opacity:1}
 @media(max-width:960px){.f-top{grid-template-columns:minmax(0,1fr);align-items:start}.f-cols{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .f-top .btn{justify-self:start}
 @media(max-width:600px){footer .flogo{height:64px}.f-cols{gap:32px 20px}.f-bot{flex-direction:column}.f-bot a{display:none}}
+
+/* ===== typography pass, as on mattandpartners.com: regular weight, bigger body, looser leading, clearer colours ===== */
+body{font-size:17px;line-height:1.6;color:#2b2a24}
+h1,h2,h3{line-height:1.2;letter-spacing:-.005em}
+h1{font-size:clamp(44px,5.2vw,72px)}
+h2{font-size:clamp(34px,3.6vw,50px)}
+h3{font-size:clamp(22px,1.8vw,26px)}
+.lead,.svc p,.half li,.step p,.ticket .q,.sunday-foot p,.gcard p,.f-claim{font-weight:400}
+.lead{font-size:clamp(17px,1.35vw,20px);line-height:1.6;color:#3a3830;max-width:34em}
+.svc p,.sunday-foot p,.gcard p{color:#45433b}
+.half li{color:#2b2a24}
+.dark .lead,.svcs .lead,.contact .lead{color:#e2e0da}
+.step p{color:#d4d2cb;font-size:16px;line-height:1.55}
+.svcs p{color:#d4d2cb}
+.f-claim{color:#d4d2cb}
+.eyebrow{font-size:18px}
+/* text on photos: white and fully legible */
+.hero h1{font-size:clamp(46px,6vw,80px);line-height:1.18;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+.hero .lead{color:#fff;font-size:clamp(19px,1.6vw,22px);line-height:1.6;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero .eyebrow{color:#fff;font-size:19px}
+/* buttons: M&P size */
+.btn{font:500 17px/1.1 "Nunito Sans",sans-serif;min-height:54px;padding:0 28px;border-radius:6px}
+.nav-cta{min-height:44px;padding:0 20px;font-size:16px}
+@media(max-width:600px){
+ body{font-size:16.5px}
+ h1{font-size:44px}
+ .hero h1{font-size:46px;line-height:1.2}
+ .hero .lead{font-size:19px}
+ .lead{font-size:17.5px}
+ .btn,.cta .btn,.cta-row .btn{font-size:17px;min-height:50px;padding:0 22px}
+}
+@media(max-width:380px){
+ .hero h1{font-size:40px}
+ .btn,.cta .btn,.cta-row .btn{font-size:16px;min-height:48px;padding:0 16px}
+}
+
+/* mobile language picker v2: bigger codes, current code stays at the right, others open to the left */
+@media(max-width:600px){
+ .lang{height:44px;align-items:center}
+ .lang a{font-size:19px;line-height:44px;margin:0}
+ .lang a[aria-current]{order:3;padding:0 0 0 8px}
+ .lang a:not([aria-current]){order:2}
+ .lang.open a:not([aria-current]){max-width:52px;padding:0 9px}
+ .lang .globe{width:24px;height:24px;margin-bottom:0}
+ .lang.open .globe{margin-inline-end:2px}
+ .lang a[aria-current]::after{width:6px;height:6px;margin-inline-start:6px;transform:rotate(135deg);vertical-align:3px}
+ .lang.open a[aria-current]::after{transform:rotate(-45deg)}
+ nav:has(.lang.open) .logo .logo-ev{display:none}
+}
+@media(max-width:380px){.lang a{font-size:18px}.lang.open a:not([aria-current]){padding:0 7px}.lang .globe{width:22px;height:22px}}
 @media(prefers-reduced-motion:reduce){.mnu,.mnu.open,.mnu .mnu-list li,.mnu .mnu-side>*{transition:none}}
 </style>
 </head>
@@ -701,7 +751,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   <p class="lead">Dîners privés, mariages et événements d'entreprise signés Matias Lauper : des années de métier en Suisse, en Argentine et en Italie, servies à votre table.</p>
   <div class="cta">
    <a class="btn btn-soft" href="#servicios">Découvrir <svg class="ic"><use href="#i-arrow"/></svg></a>
-   <a class="btn btn-ghost" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Demander une proposition</a>
+   <a class="btn btn-ghost" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span class="hide-m">Demander une proposition</span><span class="show-m">Proposition</span></a>
   </div>
  </div>
 </header>
@@ -724,7 +774,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
    <p class="lead">Je suis Matias Lauper. J'ai cuisiné pendant de nombreuses années en Suisse, en Argentine et en Italie, et j'ai eu mes propres restaurants dans ces trois pays. Le dernier était Oliva Negra, à Barcelone.</p>
    <p class="lead">Aujourd'hui, Oliva Negra est ma cuisine d'auteur en mouvement : je l'apporte chez vous, à votre mariage, dans votre entreprise ou sur une longue table face à la mer.</p>
    <div class="facts"><div><svg class="ic"><use href="#i-pin"/></svg><b>Suisse</b><span>restaurant propre</span></div><div><svg class="ic"><use href="#i-pin"/></svg><b>Argentine</b><span>restaurant propre</span></div><div><svg class="ic"><use href="#i-pin"/></svg><b>Italie</b><span>restaurant propre</span></div><div><svg class="ic"><use href="#i-pin"/></svg><b>Barcelone</b><span>Oliva Negra</span></div></div>
-   <div class="cta"><a class="btn btn-dark" href="#servicios">Voir les services <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Écrivez-moi</a></div>
+   <div class="cta"><a class="btn btn-dark" href="#servicios"><span class="hide-m">Voir les services</span><span class="show-m">Services</span> <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Écrivez-moi</a></div>
   </div>
   <figure class="hfig pfig reveal"><img src="../img/matias.jpg" alt="Matias Lauper, chef d'Oliva Negra, en veste noire"><figcaption><small>Chef</small><b>Matias Lauper</b></figcaption></figure>
  </div>
@@ -753,7 +803,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   <h2>Chez vous. Ma cuisine.</h2>
   <p class="lead">J'arrive avec tout, je cuisine sous vos yeux et je sers plat après plat. Vous ne vous occupez que de vos invités.</p>
   <ul><li><svg class="ic"><use href="#i-check"/></svg>Menus dégustation ou dîner à table</li><li><svg class="ic"><use href="#i-check"/></svg>Cuisine en direct, devant vos invités</li><li><svg class="ic"><use href="#i-check"/></svg>Chez vous ou là où vous le souhaitez</li></ul>
-  <div class="cta"><a class="btn btn-dark" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cal"/></svg>Réserver une date</a><a class="btn btn-line" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg>Écrire</a></div>
+  <div class="cta"><a class="btn btn-dark" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cal"/></svg><span class="hide-m">Réserver une date</span><span class="show-m">Réserver</span></a><a class="btn btn-line" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg>Écrire</a></div>
  </div>
 </section>
 
@@ -764,7 +814,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   <h2>Le jour du oui, à feu doux.</h2>
   <p class="lead">Ensemble, nous créons un menu qui raconte votre histoire : bouchées, dîner servi, stations ou un grand asado sous les lumières.</p>
   <ul><li><svg class="ic"><use href="#i-check"/></svg>Mariages intimes et grandes célébrations</li><li><svg class="ic"><use href="#i-check"/></svg>Apéritif, banquet et en-cas de fin de soirée</li><li><svg class="ic"><use href="#i-check"/></svg>Menu sur mesure, créé pour vous</li></ul>
-  <div class="cta"><a class="btn btn-dark" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Imaginer votre mariage</a><a class="btn btn-line" href="#platos">Voir les plats <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  <div class="cta"><a class="btn btn-dark" href="https://wa.me/34662225270" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span class="hide-m">Imaginer votre mariage</span><span class="show-m">Votre mariage</span></a><a class="btn btn-line" href="#platos">Voir les plats <svg class="ic"><use href="#i-arrow"/></svg></a></div>
  </div>
 </section>
 
@@ -775,7 +825,7 @@ set();addEventListener('orientationchange',()=>{last=0;setTimeout(set,300)});add
   <h2>Des équipes qui se mettent à table.</h2>
   <p class="lead">Une expérience gastronomique pour votre équipe ou vos clients, dans vos bureaux, dans un lieu d'exception ou sur la Costa Brava.</p>
   <ul><li><svg class="ic"><use href="#i-check"/></svg>Repas d'équipe, séminaires et incentives</li><li><svg class="ic"><use href="#i-check"/></svg>Dîners clients et présentations</li><li><svg class="ic"><use href="#i-check"/></svg>Traiteur, cuisine en direct et asado</li></ul>
-  <div class="cta"><a class="btn btn-dark" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg>Proposition entreprises</a><a class="btn btn-line" href="tel:+34662225270"><svg class="ic"><use href="#i-phone"/></svg>Appeler</a></div>
+  <div class="cta"><a class="btn btn-dark" href="mailto:hola@olivanegra.es"><svg class="ic"><use href="#i-mail"/></svg><span class="hide-m">Proposition entreprises</span><span class="show-m">Proposition</span></a><a class="btn btn-line" href="tel:+34662225270"><svg class="ic"><use href="#i-phone"/></svg>Appeler</a></div>
  </div>
 </section>
 
