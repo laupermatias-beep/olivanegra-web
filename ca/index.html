@@ -9,7 +9,7 @@
 <meta name="description" content="Oliva Negra · Matias Lauper. Cuina d'autor per a sopars privats, casaments, empreses i esdeveniments a Barcelona i la Costa Brava.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@700;800&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,500&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap" rel="stylesheet">
 <style>
 /* VOICE: sobria y segura, como una agencia de diseño suiza que cocina; poco texto, mucho aire.
    IDEA: la línea de M&P: fotografía macro a sangre, gris claro, títulos finos y estrechos, listas con íconos de línea.
@@ -679,6 +679,16 @@ h3{font-size:clamp(22px,1.8vw,26px)}
 @media(max-width:600px){.mnu-btn{margin-inline-start:18px;align-self:center}.mnu-btn .bars{transform:translateY(-6px)}}
 @media(max-width:380px){.mnu-btn{margin-inline-start:12px}}
 .mnu-list>li>a:hover,.mnu-list>li>a:active,.mnu-list>li>a[aria-current],.mnu-sub a:hover,.mnu-sub a:active{color:#2997ff}
+
+/* Sunday ticket, styled like the Instagram post */
+.ticket{background:#171717;border-radius:6px;box-shadow:0 10px 30px rgba(13,11,0,.08),0 2px 6px rgba(13,11,0,.05);padding:clamp(36px,4.4vw,56px) clamp(24px,3vw,40px)}
+.ticket small{font:600 13px "Nunito Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#a9a69e;margin-bottom:18px}
+.ticket small::after{content:"";display:block;width:56px;height:2px;background:#7ea6dd;margin:14px auto 0}
+.ticket h3{font-family:"Playfair Display",Georgia,serif;font-weight:700;text-transform:none;letter-spacing:-.01em;font-size:clamp(54px,5.6vw,74px);line-height:1;color:#f4f1ea}
+.ticket h3 i{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:.5em;color:#7ea6dd;margin:6px 0 2px;line-height:1}
+.ticket .q{font-family:"Playfair Display",Georgia,serif;font-weight:400;font-size:clamp(19px,1.6vw,22px);line-height:1.4;color:#ece9e2;margin:22px auto;max-width:16em;text-wrap:balance}
+.ticket .d{font-family:Montserrat,sans-serif;font-weight:700;font-size:clamp(19px,1.7vw,23px);letter-spacing:.01em;color:#fff}
+.ticket .m{font-size:15px;color:#a9a69e;margin-top:4px}
 @media(prefers-reduced-motion:reduce){.mnu,.mnu.open,.mnu .mnu-list li,.mnu .mnu-side>*{transition:none}}
 </style>
 </head>
