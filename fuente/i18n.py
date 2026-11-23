@@ -1,5 +1,7 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("desde","des de","from","à partir de"),
+("12,50 €","12,50 €","€12.50","12,50 €"),
 ("26,90 €","26,90 €","€26.90","26,90 €"),
 ("16,90 €","16,90 €","€16.90","16,90 €"),
 ("14,20 €","14,20 €","€14.20","14,20 €"),
