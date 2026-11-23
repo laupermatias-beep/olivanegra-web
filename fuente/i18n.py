@@ -1,5 +1,11 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Sobre mí","Sobre mi","About me","À propos"),
+("La carta","La carta","Menu","La carte"),
+("Menú","Menú","Menu","Menu"),
+("Cerrar","Tancar","Close","Fermer"),
+("Cómo trabajo","Com treballo","How I work","Ma méthode"),
+("Carta y precios","Carta i preus","Menu & prices","Carte et prix"),
 ("Escríbeme","Escriu-me","Message me","Écrivez-moi"),
 ("Diseñar vuestra boda","Dissenyar el vostre casament","Plan your wedding","Imaginer votre mariage"),
 ("Propuesta para empresas","Proposta per a empreses","Proposal for companies","Proposition entreprises"),
@@ -34,7 +40,7 @@ ROWS = [
 ("Domingos","Diumenges","Sundays","Dimanches"),
 ("Hablemos","Parlem","Let's talk","Parlons-en"),
 ("Private Chef & Eventos · Barcelona · Costa Brava","Private Chef & Esdeveniments · Barcelona · Costa Brava","Private Chef & Events · Barcelona · Costa Brava","Private Chef & Événements · Barcelone · Costa Brava"),
-("Cocina de autor. Cada plato, una decisión.","Cuina d'autor. Cada plat, una decisió.","Signature cuisine. Every dish, a decision.","Cuisine d'auteur. Chaque assiette, une décision."),
+("Cocina de autor. Cada plato, un placer.","Cuina d'autor. Cada plat, un plaer.","Signature cuisine. Every dish, a pleasure.","Cuisine d'auteur. Chaque assiette, un plaisir."),
 ("Cenas privadas, bodas y eventos de empresa con la firma de Matias Lauper: años de oficio en Suiza, Argentina e Italia, servidos en tu mesa.","Sopars privats, casaments i esdeveniments d'empresa amb la firma de Matias Lauper: anys d'ofici a Suïssa, l'Argentina i Itàlia, servits a la teva taula.","Private dinners, weddings and corporate events signed by Matias Lauper: years of craft in Switzerland, Argentina and Italy, served at your table.","Dîners privés, mariages et événements d'entreprise signés Matias Lauper : des années de métier en Suisse, en Argentine et en Italie, servies à votre table."),
 ("Descubrir","Descobrir","Discover","Découvrir"),
 ("Pedir una propuesta","Demanar una proposta","Request a proposal","Demander une proposition"),
