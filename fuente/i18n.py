@@ -1,5 +1,6 @@
 # Translations of the Oliva Negra one-page. Spanish is the source; each row: es, ca, en, fr.
 ROWS = [
+("Reservar plaza","Reservar plaça","Book your spot","Réserver ma place"),
 ("Propuesta","Proposta","Proposal","Proposition"),
 ("Tu boda","El teu casament","Your wedding","Votre mariage"),
 ("Cocina de autor para cenas privadas, bodas, empresas y domingos de club.","Cuina d'autor per a sopars privats, casaments, empreses i diumenges de club.","Signature cuisine for private dinners, weddings, companies and club Sundays.","Cuisine d'auteur pour dîners privés, mariages, entreprises et dimanches au club."),
