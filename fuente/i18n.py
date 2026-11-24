@@ -201,7 +201,7 @@ ROWS = [
 ("4,80 €","4,80 €","€4.80","4,80 €"),
 ("Buenos vinos","Bons vins","Good wines","Bons vins"),
 ("para acompañar","per acompanyar","to go with it","pour accompagner"),
-("Entrada libre · trae a tu familia y amigos · la ubicación exacta te llega al reservar","Entrada lliure · porta la teva família i amics · la ubicació exacta et arriba en reservar","Free entry · bring your family and friends · you get the exact location when you book","Entrée libre · venez en famille ou entre amis · l'adresse exacte vous est envoyée à la réservation"),
+("Entrada libre · trae a tu familia y amigos · Passatge del Mas d'en Llor, Aiguablava (Begur)","Entrada lliure · porta la teva família i amics · Passatge del Mas d'en Llor, Aiguablava (Begur)","Free entry · bring your family and friends · Passatge del Mas d'en Llor, Aiguablava (Begur)","Entrée libre · venez en famille ou entre amis · Passatge del Mas d'en Llor, Aiguablava (Begur)"),
 ("Apuntarme al domingo","Apuntar-me al diumenge","Sign me up for Sunday","Je m'inscris pour dimanche"),
 ("Contacto","Contacte","Contact","Contact"),
 ("Tu próxima mesa empieza aquí.","La teva propera taula comença aquí.","Your next table starts here.","Votre prochaine table commence ici."),
